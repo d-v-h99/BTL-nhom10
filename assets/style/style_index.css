@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'BIZ UDPGothic', sans-serif;
+}
+.header_1{
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    top: 0;
+    box-shadow: 1px 2px 3px #ccc;
+    z-index: 999;
+}
+.h_top{
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid #F5F5F5;
+    padding: 10px 0 5px;
+    justify-content: space-around;
+    font-size: 14px;
+    background-color: #fff;
+}
+.h_logo img{
+    max-width: 70px;
+    flex: 1;
+} 
+.h_right ul li{
+    display: inline-block;
+}
+.h_right li a{
+    text-decoration: none;
+}
+.h_right .login a{
+    font-weight: 800;
+    color:#171717;
+    font-size: 14px;
+    padding: 0 10px;
+}
+.h_right .language a{
+    font-size: 12px;
+    border-right: solid 1px #333;
+    padding: 0 5px;
+    color: #00713D;
+}
+.h_right .language-last a{
+    border-right: none;
+    padding-right: 5px;
+    font-size: 12px;
+    color:#171717;
+}
+.h_right .h_cart a {
+    padding: 3px 13px 5px 11px;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid #0C713D;
+    color: #0C713D;
+    background: #fff;
+    font-size: 12px;
+}
+.h_cart .fa{
+    font-size: 20px;
+    /* color: #0C713D; */
+}
+.h_menu{
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    padding-top: 13px;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); */
+}
+.h_menu ul li{
+    display: inline-block;
+}
+.h_menu ul li a{
+    padding: 0 24px;
+    font-size: 15px;
+    color: #00713D;
+    font-weight: bold;
+    text-decoration: none;
+}
+.h_icon{
+    /* margin-right: 30px; */
+    padding-right: 45px;
+}
+.h_menu .fa{
+    padding-left: 30px;
+}
+.h_menu li{
+    position: relative;
+}
+.h_menu .sabnav{
+    display: none;
+    min-width: 160px;
+     color:#000;
+    position:absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.h_menu li:hover .sabnav{
+    display: block;
+}
+.sabnav li:hover a{
+    color: #000;
+    background-color: #ccc;
+}
+.slider{
+    padding-top: 9%;
+    margin-bottom: 50px;
+}
+.col-md-6 .img_content1{
+    max-width: 530px;
+    border: 5px solid #fff;
+    top: auto;
+    left: auto;
+}
+.col-md-6 .title{
+    margin-top: 25px;
+    line-height: normal;
+    margin: 50px 0 !important;
+    color: #0C713D;
+    font-weight: 450;
+
+}
+.col-md-6 .img_content2{
+    max-width: 320px;
+    border: 5px solid #fff;
+    background-image: url(https://phuclong.com.vn/uploads/banner/6313d6d02ac48e-2949308c6b040fcoffeecopy.png);
+}
+#footer_bottom .copyright{
+    background-color: #010101;
+    font-size: 0.7em;
+    line-height: 1.6;
+    padding:2px 15px 3px !important;
+    color: #fff;
+}
+#footer_form h6{
+    margin-bottom: 10px;
+}
+#img-noti{
+   width: 165px;
+   height: 65px;
+}
+.f-social li{
+    display: inline-block;
+}
+.f-social li i{
+    width: 30px;
+    height: 50px;
+    padding: 0px 0 0 10px;
+     filter: grayscale(0);
+}
+.f-social li:hover{
+     filter: grayscale(100%);
+}
+#footer_begin{
+    margin-top: 30px;
+}
+#store{
+    background-color: rgb(94, 41, 41) ;
+}
+.store h2{
+    padding-left: 70px;
+    padding-top: 30px;
+    color: #fff;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-size: 50px;
+    border-bottom: 2px solid #fff;
+}
+.store iframe{
+    width: 700px;
+    height: 300px;
+    margin-left: 30px;
+    border: none;
+}
