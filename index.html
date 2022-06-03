@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BTL-nhóm 10</title>
     <link rel="stylesheet" href="./assets/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/style/style_index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -15,9 +15,40 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/23eb3f6a6e.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Plugin chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "107945601581836");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v14.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
     <!-- begin header -->
     <div class="header_1">
         <div class="h_top">
@@ -65,8 +96,8 @@
     <!-- begin slide  -->
     <div class="container-fluid slider">
         <div class="row">
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
+            <div id="carouselExampleControls" class="carousel slide w-100" data-ride="carousel">
+                <div class="carousel-inner w-100">
                     <div class="carousel-item active">
                         <img src="./assets/img/slide1.png" class="d-block w-100" alt="...">
                     </div>
@@ -89,9 +120,10 @@
         </div>
     </div>
     <!-- end slide -->
+
     <!-- begin content -->
     <div class="container">
-        <div class="row">
+        <div class="row post-first">
             <div class="col-md-6 col-sm-12">
                 <img src="./assets/img/content_1.jpg" class="img_content1">
             </div>
@@ -109,40 +141,194 @@
                 </p>
                 <a href="https://phuclong.com.vn/ve-chung-toi" class="btn btn-outline-success">Xem thêm</a>
             </div>
+
         </div>
-        <div class="row">
+        <div class="row content">
             <div class="col-md-6 col-sm-12">
                 <h3 class="title">ĐỘI NGŨ NHÂN VIÊN TRÀN ĐẦY NHIỆT HUYẾT</h3>
                 <p>Trong suốt quá trình hoạt động và phát triển, đội ngũ quản lý và nhân viên của Phúc Long
-                    Coffee &amp; Tea, qua bao thế hệ, đã cùng nhau xây dựng, nuôi dưỡng niềm đam mê dành cho trà
-                    và&nbsp;cà phê với mong muốn được thử thách bản thân trong ngành dịch vụ năng động và sáng
+                    Coffee &amp; Tea, qua bao thế hệ, đã cùng nhau xây dựng, nuôi dưỡng niềm đam mê dành cho
+                    trà
+                    và&nbsp;cà phê với mong muốn được thử thách bản thân trong ngành dịch vụ năng động và
+                    sáng
                     tạo.</p>
                 <a href="https://phuclong.com.vn/ve-chung-toi" class="btn btn-outline-success">GIA NHẬP ĐỘI NGŨ PHÚC
                     LONG</a>
             </div>
-            <div class="col-md-6 col-sm-12">
+            <div class="col-md-6 col-sm-12" id="content-2">
                 <img src="./assets/img/content_2.jpg" class="img_content2">
             </div>
         </div>
+
     </div>
+    <!-- end content -->
 
     <!-- begin store -->
-    <div class="container-fluid" id="store">
+    <div class="container" id="map_store">
         <div class="row">
-            <!-- <div class="col-md-6 col-xs-12">
-                <iframe id="store-id" src="./tam.html"></iframe>
+            <div class="col-md-8 col-xs-12 map-first-el" style=" padding: 70px 50px 25px;">
+                <h2>HỆ THỐNG CỬA HÀNG</h2>
+                <div class="btn-group">
+                    <div class="dropdown" id="map_city" style="margin-right:5px;">
+                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"
+                            id="btn_city">
+                            TỈNH/THÀNH PHỐ &nbsp &nbsp &nbsp
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Thành phố Hồ Chí Minh</a>
+                            <a class="dropdown-item" href="#">Thành phố Hà Nội</a>
+                            <a class="dropdown-item" href="#">Tỉnh Thái Nguyên</a>
+                            <a class="dropdown-item" href="#">Thành phố Hải Phòng</a>
+                            <a class="dropdown-item" href="#">Tỉnh Vĩnh Phúc</a>
+                            <a class="dropdown-item" href="#">Tỉnh Thanh Hoá</a>
+                            <a class="dropdown-item" href="#">Tỉnh Hải Dương</a>
+                            <a class="dropdown-item" href="#">Tỉnh Sơn La</a>
+
+                        </div>
+                    </div>
+                    <div class="dropdown" id="map_town">
+                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"
+                            id="btn_town">
+                            QUẬN &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Quận 1</a>
+                            <a class="dropdown-item" href="#">Quận 2</a>
+                            <a class="dropdown-item" href="#">Quận 3</a>
+                            <a class="dropdown-item" href="#">Quận 4</a>
+                            <a class="dropdown-item" href="#">Quận 5</a>
+                            <a class="dropdown-item" href="#">Quận 6</a>
+                            <a class="dropdown-item" href="#">Quận 7</a>
+                            <a class="dropdown-item" href="#">Quận 8</a>
+                            <a class="dropdown-item" href="#">Quận 9</a>
+                            <a class="dropdown-item" href="#">Quận 10</a>
+                            <a class="dropdown-item" href="#">Quận 11</a>
+                            <a class="dropdown-item" href="#">Quận Gò Vấp</a>
+                            <a class="dropdown-item" href="#">Quận Tân Bình</a>
+                            <a class="dropdown-item" href="#">Quận Bình Thạch</a>
+                            <a class="dropdown-item" href="#">Quận Tân Phú</a>
+
+                        </div>
+                    </div>
+                </div>
+                <h4>Địa chỉ cửa hàng</h4>
             </div>
-            <div class="col-md-6 col-xs-12"></div> -->
         </div>
+        <div class="row">
+            <div class="col-md-8 col-xs-12 dir" style=" padding: 70px 50px 25px;">
+                <div class="map-info">
+                    <div class="iteam">
+                        <i class="fas fa-store"></i>
+                        <div class="infor">
+                            <p>Phúc Long Lê Văn Sỹ - 350 Lê Văn Sỹ, quận 3, Hồ Chí Minh</p>
+                            <p>Điện thoại : 1900 1505</p>
+                        </div>
+                        <a target="blank" href="https://goo.gl/maps/54xEesPh5MnYWDtf8">Chỉ Đường</a>
+                    </div>
+                    <div class="iteam">
+                        <i class="fas fa-store"></i>
+                        <div class="infor">
+                            <p>Phúc Long Lê Văn Sỹ - 350 Lê Văn Sỹ, quận 3, Hồ Chí Minh</p>
+                            <p>Điện thoại : 1900 1505</p>
+                        </div>
+                        <a target="blank" href="https://goo.gl/maps/54xEesPh5MnYWDtf8">Chỉ Đường</a>
+                    </div>
+                    <div class="iteam">
+                        <i class="fas fa-store"></i>
+                        <div class="infor">
+                            <p>Phúc Long Lê Văn Sỹ - 350 Lê Văn Sỹ, quận 3, Hồ Chí Minh</p>
+                            <p>Điện thoại : 1900 1505</p>
+                        </div>
+                        <a target="blank" href="https://goo.gl/maps/54xEesPh5MnYWDtf8">Chỉ Đường</a>
+                    </div>
+                    <div class="iteam">
+                        <i class="fas fa-store"></i>
+                        <div class="infor">
+                            <p>Phúc Long Lê Văn Sỹ - 350 Lê Văn Sỹ, quận 3, Hồ Chí Minh</p>
+                            <p>Điện thoại : 1900 1505</p>
+                        </div>
+                        <a target="blank" href="https://goo.gl/maps/54xEesPh5MnYWDtf8">Chỉ Đường</a>
+                    </div>
+                    <div class="iteam">
+                        <i class="fas fa-store"></i>
+                        <div class="infor">
+                            <p>Phúc Long Lê Văn Sỹ - 350 Lê Văn Sỹ, quận 3, Hồ Chí Minh</p>
+                            <p>Điện thoại : 1900 1505</p>
+                        </div>
+                        <a target="blank" href="https://goo.gl/maps/54xEesPh5MnYWDtf8">Chỉ Đường</a>
+                    </div>
+                    <div class="iteam">
+                        <i class="fas fa-store"></i>
+                        <div class="infor">
+                            <p>Phúc Long Lê Văn Sỹ - 350 Lê Văn Sỹ, quận 3, Hồ Chí Minh</p>
+                            <p>Điện thoại : 1900 1505</p>
+                        </div>
+                        <a target="blank" href="https://goo.gl/maps/54xEesPh5MnYWDtf8">Chỉ Đường</a>
+                    </div>
+                    <div class="iteam">
+                        <i class="fas fa-store"></i>
+                        <div class="infor">
+                            <p>Phúc Long Lê Văn Sỹ - 350 Lê Văn Sỹ, quận 3, Hồ Chí Minh</p>
+                            <p>Điện thoại : 1900 1505</p>
+                        </div>
+                        <a target="blank" href="https://goo.gl/maps/54xEesPh5MnYWDtf8">Chỉ Đường</a>
+                    </div>
+                    <div class="iteam">
+                        <i class="fas fa-store"></i>
+                        <div class="infor">
+                            <p>Phúc Long Lê Văn Sỹ - 350 Lê Văn Sỹ, quận 3, Hồ Chí Minh</p>
+                            <p>Điện thoại : 1900 1505</p>
+                        </div>
+                        <a target="blank" href="https://goo.gl/maps/54xEesPh5MnYWDtf8">Chỉ Đường</a>
+                    </div>
+                    <div class="iteam">
+                        <i class="fas fa-store"></i>
+                        <div class="infor">
+                            <p>Phúc Long Lê Văn Sỹ - 350 Lê Văn Sỹ, quận 3, Hồ Chí Minh</p>
+                            <p>Điện thoại : 1900 1505</p>
+                        </div>
+                        <a target="blank" href="https://goo.gl/maps/54xEesPh5MnYWDtf8">Chỉ Đường</a>
+                    </div>
+                    <div class="iteam">
+                        <i class="fas fa-store"></i>
+                        <div class="infor">
+                            <p>Phúc Long Lê Văn Sỹ - 350 Lê Văn Sỹ, quận 3, Hồ Chí Minh</p>
+                            <p>Điện thoại : 1900 1505</p>
+                        </div>
+                        <a target="blank" href="https://goo.gl/maps/54xEesPh5MnYWDtf8">Chỉ Đường</a>
+                    </div>
+                    <div class="iteam">
+                        <i class="fas fa-store"></i>
+                        <div class="infor">
+                            <p>Phúc Long Lê Văn Sỹ - 350 Lê Văn Sỹ, quận 3, Hồ Chí Minh</p>
+                            <p>Điện thoại : 1900 1505</p>
+                        </div>
+                        <a target="blank" href="https://goo.gl/maps/54xEesPh5MnYWDtf8">Chỉ Đường</a>
+                    </div>
+                    <div class="iteam">
+                        <i class="fas fa-store"></i>
+                        <div class="infor">
+                            <p>Phúc Long Lê Văn Sỹ - 350 Lê Văn Sỹ, quận 3, Hồ Chí Minh</p>
+                            <p>Điện thoại : 1900 1505</p>
+                        </div>
+                        <a target="blank" href="https://goo.gl/maps/54xEesPh5MnYWDtf8">Chỉ Đường</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
     <!-- end store -->
-    <!-- end content -->
+
+    <!-- begin footer -->
     <div class="container" id="footer_begin">
         <div class="row">
-            <div class="col-md-6 col-xs-12">
+            <div class="col-md-12 col-xl-6 col-xs-12 detail-dir">
                 <b>Trụ sở chính</b>: Công ty Cổ Phần Phúc Long Heritage - ĐKKD: 0316 871719<br>
                 do sở KHĐT TPHCM cấp lần đầu ngày 21/05/2021<br>
-                <b>Nhà máy</b>: D_8D_CN Đường XE 1, Khu Công Nghiệp Mỹ Phước III, phường Mỹ Phước, thị xã Bến Cát, tỉnh
+                <b>Nhà máy</b>: D_8D_CN Đường XE 1, Khu Công Nghiệp Mỹ Phước III, phường Mỹ Phước, thị xã Bến Cát,
+                tỉnh
                 Bình Dương, Việt Nam<br>
                 <b>Địa chỉ</b>: 42/24 - 42/26 Đường 643 Tạ Quang Bửu, phường 4, quận 8, Hồ Chí Minh<br>
                 <b>Điện thoại</b>: 028 6263 0377 - 6263 0378 <br>
@@ -150,7 +336,7 @@
                 <b class="w37">Email</b><span class="w4">:</span><span class="w1"> Sales@phuclong.com.vn</span><br>
                 <b class="w37"> </b><span class="w4"></span><span class="w1"> Info@phuclong.com.vn</span>
             </div>
-            <div class="col-md-4 col-xs-12 f_follow" id="footer_form">
+            <div class="col-md-6 col-xl-4  col-xs-12 f_follow" id="footer_form">
                 <h6>Đăng kí nhận khuyến mãi</h6>
                 <div class="form-inline">
                     <input type="email" class="form-control" id="newsletter-email" name="newsletter-email"
@@ -159,7 +345,7 @@
                 </div>
                 </form>
             </div>
-            <div class="col-md-2 col-xs-12 f-language">
+            <div class="col-md-6 col-xl-2 col-xs-12 f-language">
                 <div class="language">
                     <a class="language-active" style="color: #0C713D; text-decoration: none;">VN</a> |
                     <a class="language-last" style="color:#010101; text-decoration: none;">EN</a>
@@ -187,9 +373,10 @@
         </div>
     </footer>
     <!-- end footer -->
-    <script>
 
-    </script>
+    <!-- begin backtop -->
+    <a class="back_top" href="#"><i class="fa fa-angle-up fa-3x"></i></a>
+    <!-- end backtop -->
 </body>
 
 </html>
