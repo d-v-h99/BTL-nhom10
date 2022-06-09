@@ -1,0 +1,280 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'BIZ UDPGothic', sans-serif;
+}
+/* begin header */
+
+.header_1{
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    top: 0;
+    box-shadow: 1px 2px 3px #ccc;
+    z-index: 999;
+}
+.h_top{
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid #F5F5F5;
+    padding: 10px 0 5px;
+    justify-content: space-around;
+    font-size: 14px;
+    background-color: #fff;
+}
+.h_logo img{
+    max-width: 70px;
+    flex: 1;
+} 
+.h_right ul li{
+    display: inline-block;
+}
+.h_right li a{
+    text-decoration: none;
+}
+.h_right .login a{
+    font-weight: 800;
+    color:#171717;
+    font-size: 14px;
+    padding: 0 10px;
+}
+.h_right .language a{
+    font-size: 12px;
+    border-right: solid 1px #333;
+    padding: 0 5px;
+    color: #00713D;
+}
+.h_right .language-last a{
+    border-right: none;
+    padding-right: 5px;
+    font-size: 12px;
+    color:#171717;
+}
+.h_right .h_cart a {
+    padding: 3px 13px 5px 11px;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid #0C713D;
+    color: #0C713D;
+    background: #fff;
+    font-size: 12px;
+}
+.h_cart .fa{
+    font-size: 20px;
+}
+.h_menu{
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    padding-top: 13px;
+}
+.h_menu ul li{
+    display: inline-block;
+}
+.h_menu ul li a{
+    padding: 0 24px;
+    font-size: 15px;
+    color: #00713D;
+    font-weight: bold;
+    text-decoration: none;
+}
+.h_icon{
+    padding-right: 45px;
+}
+.h_menu .fa{
+    padding-left: 30px;
+}
+/* css sub-menu start */
+.menu{
+    position: relative;
+    height: 100%;
+}
+.menu-sub{
+    position: absolute;
+    /* display: flex; */
+    z-index: 999;
+    top:100%;
+    display: none;
+    padding-top: 10px;
+}
+.menu:hover .menu-sub{
+    display: block;
+}
+.menu-sub-content {
+    width: 230px;
+    line-height: 30px;
+    border: none;
+    padding: 20px;
+    background: #fff;
+    position: relative;
+    padding-top: 10px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .menu-sub-item {
+    padding: 10px;
+    width: 100%;
+  }
+  .menu-sub-item:hover {
+    background: #0C713D;
+    color: #fff;
+  }
+  .h_menu ul {
+    margin: 0 !important;
+  }
+  .h_menu li {
+    padding-bottom: 1rem;
+  }
+.menu-sub::after{
+    content: "";
+    position: absolute;
+    top:-12px;
+    width: 0;
+    height: 0;
+    border: 12px #ffd70000 solid;
+    border-bottom-color: #f8f9fa;
+    right: 171px;
+}
+/* css sub-menu end */
+/* Css title */
+.title-menu-a-1{
+    text-align: center;
+    color: #797979;
+    margin : 0 auto;
+}
+.title h1{
+    font-size: 36px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.title-menu{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.title-menu li{
+    list-style-type:none;
+      
+}
+.title-menu  li .title-menu-a-2{
+    color: #797979;
+    font-size: 22px;
+    padding: 0 25px;
+}
+.title-menu  li a.title-menu-a-1{
+    color: #797979;
+    font-size:16px;
+    margin: 0 5px;
+}
+.title-menu  li a.title-menu-a-1:hover{
+    color: red;
+    text-decoration:none;
+}
+.title-menu  li div.title-menu-a-2:hover{
+    color: #0C713D;
+    border-top: 1px solid #0C713D;
+    border-bottom: 1px solid #0C713D;
+    text-decoration:none;
+}
+
+.title img{
+    display : flex;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 50px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+.title-menu  li.active div{
+    color: #0C713D;
+    border-top: 1px solid #0C713D;
+    border-bottom: 1px solid #0C713D;
+    text-decoration:none;
+}
+
+/* css product */
+.item-drink {
+    position: relative;
+    text-align: center;
+    border-radius: 5px;
+    padding: 30px 15px;
+    min-height: 380px;
+    max-height: 380px;
+}
+.item-drink:hover{
+    border: 1px solid rgb(117, 114, 114);
+}
+.item-drink-box img {
+    width: 150px;
+    margin: 0px auto;
+}
+.item-drink-info .item-drink-name-Vn {
+    font-weight: bold;
+    font-size: 16px ;
+    margin-bottom: 5px;
+}
+.item-drink-info .item-drink-name-En{
+    
+    font-size: 14px ;
+    margin-bottom: 5px;
+}
+.item-drink-info .item-drink-cost{
+    
+    font-weight: bold;
+    font-size: 18px ;
+    color: #0C713D;
+    margin-bottom: 5px;
+}
+.item-drink-info .item-drink-btn{
+    border: 1px solid #0C713D;
+    color: #00713D;
+    margin : auto;
+    font-size: 14px;
+    
+}
+.item-drink-info .item-drink-btn:hover{
+    border: 1px solid #0C713D;
+    background-color: #00713D;
+    color: white;
+    
+}
+
+
+
+/* css footer_begin */
+#footer_begin{
+    border-top: 2px solid rgb(112, 112, 112);
+}
+
+
+/* style modal */
+.modal-content {
+    max-width: 850px; 
+    height: 550px ; 
+    padding: 70px 30px 50px 30px ;
+}
+.info_product_size_lish{
+    list-style-type: none;
+    display: flex;
+}
+.info_product_size label{
+    display: flex;
+}
+.info_product_notes textarea[name="note"]{
+    max-width: 220px;
+    height : 60px;
+    resize: none;
+} 
+div #btn_pay{
+    border: 1px solid #00713D;
+    color:#00713D;
+}  
+
+.modal_img{
+    max-width:300px;
+}
+
