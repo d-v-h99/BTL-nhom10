@@ -1,6 +1,4 @@
-$(document).ready(function () {
-    console.log('123')
-})
+
 const elementRoot = ReactDOM.createRoot(document.getElementById('root'))
 
 var lish_product_drink = [
@@ -186,26 +184,36 @@ var lish_product_bakery = [
         title_Cost : '19.637 đ', 
     },
 ]
-var i=0
+var i=0, j=0
+
+
+
+
+function fuc_click(){
+    console.log(document.querySelectorAll('.item-drink-btn'))
+}
+
+
 function Content ({
     title_Vn,
     title_En,
     title_Cost,
     href,
     btn,
+    onclick
     
 }) {
     
-    return title_En != "" ? 
+    return btn != 'Liên hệ' ? 
     (
         <div className='item-drink col-md-3 col-sm-6' >
             <div className='item-drink-box'>
-                <img src={href} alt=""></img>
+                <img src={href} alt="" className='item-drink-index'></img>
                 <div className="item-drink-info">
-                    <div className="item-drink-name-Vn"><p>{title_Vn}</p></div>
-                    <div className="item-drink-name-En"><p>{title_En}</p></div>
-                    <div className="item-drink-cost"><p>{title_Cost}</p></div>
-                    <button className="btn item-drink-btn text-uppercase" data-toggle="modal" data-target="#myModal" >{btn}</button>
+                    <div className="item-drink-name-Vn "  ><p>{title_Vn}</p></div>
+                    <div className="item-drink-name-En " ><p>{title_En}</p></div>
+                    <div className="item-drink-cost " ><p>{title_Cost}</p></div>
+                    <button className="btn item-drink-btn text-uppercase " data-toggle="modal" data-target="#myModal" onClick={onclick}>{btn}</button>
                 </div>
             </div>
         </div>
@@ -218,7 +226,7 @@ function Content ({
                 <div className="item-drink-info">
                     <div className="item-drink-name-Vn"><p>{title_Vn}</p></div>
                     <div className="item-drink-cost"><p>{title_Cost}</p></div>
-                    <button className="btn item-drink-btn text-uppercase">{btn}</button>
+                    <button className="btn item-drink-btn text-uppercase" >{btn}</button>
                 </div>
             </div>
         </div>
@@ -235,6 +243,14 @@ var elementRS = (
                 href = {e.href}   
                 btn = 'Đặt hàng'
                 key = {i++}
+                onclick ={ () => {
+                    var modal_img = document.querySelector('.modal_img')
+                    modal_img.src = e.href 
+                    var modal_name = document.querySelector('.info_product_name')
+                    modal_name.innerText = e.title_Vn
+                    var modal_cost = document.querySelector('.gia_tien')
+                    modal_cost.innerText = e.title_Cost
+                }}
                 />  
             )}   
         </div>
@@ -242,6 +258,9 @@ var elementRS = (
     
     elementRoot.render(elementRS)
 
+
+
+    // js các nút chọn menu
     function remove_attribute_active(){
         var listItemDrink = document.querySelectorAll(".title-menu-cr li ")
             listItemDrink.forEach((e) => {
@@ -264,6 +283,14 @@ var elementRS = (
                     title_Cost = {e.title_Cost}
                     href = {e.href} 
                     btn = 'Đặt hàng' 
+                    onclick ={ () => {
+                        var modal_img = document.querySelector('.modal_img')
+                        modal_img.src = e.href 
+                        var modal_name = document.querySelector('.info_product_name')
+                        modal_name.innerText = e.title_Vn
+                        var modal_cost = document.querySelector('.gia_tien')
+                        modal_cost.innerText = e.title_Cost
+                    }}
                     key = {i++} 
                     />  
                 )}   
@@ -286,7 +313,15 @@ var elementRS = (
                     title_En = {e.title_En}
                     title_Cost = {e.title_Cost}
                     href = {e.href}  
-                    btn = 'Liên hệ' 
+                    btn = 'Liên hệ'
+                    onclick ={ () => {
+                        var modal_img = document.querySelector('.modal_img')
+                        modal_img.src = e.href 
+                        var modal_name = document.querySelector('.info_product_name')
+                        modal_name.innerText = e.title_Vn
+                        var modal_cost = document.querySelector('.gia_tien')
+                        modal_cost.innerText = e.title_Cost
+                    }} 
                     key = {i++}
                     />  
                 )}   
@@ -310,6 +345,14 @@ var elementRS = (
                         title_Cost = {e.title_Cost}
                         href = {e.href}  
                         btn = 'Đặt hàng' 
+                        onclick ={ () => {
+                            var modal_img = document.querySelector('.modal_img')
+                            modal_img.src = e.href 
+                            var modal_name = document.querySelector('.info_product_name')
+                            modal_name.innerText = e.title_Vn
+                            var modal_cost = document.querySelector('.gia_tien')
+                            modal_cost.innerText = e.title_Cost
+                        }}
                         key = {i++}
                         />  
                     )}   
@@ -317,3 +360,6 @@ var elementRS = (
             )
             elementRoot.render(elementRS)
         }
+    
+
+

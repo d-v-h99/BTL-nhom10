@@ -249,3 +249,32 @@ body {
 #footer_begin{
     border-top: 2px solid rgb(112, 112, 112);
 }
+
+
+/* style modal */
+.modal-content {
+    max-width: 850px; 
+    height: 550px ; 
+    padding: 70px 30px 50px 30px ;
+}
+.info_product_size_lish{
+    list-style-type: none;
+    display: flex;
+}
+.info_product_size label{
+    display: flex;
+}
+.info_product_notes textarea[name="note"]{
+    max-width: 220px;
+    height : 60px;
+    resize: none;
+} 
+div #btn_pay{
+    border: 1px solid #00713D;
+    color:#00713D;
+}  
+
+.modal_img{
+    max-width:300px;
+}
+
