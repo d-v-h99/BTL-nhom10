@@ -36,7 +36,11 @@
                             <div class="row-cols-1 mb-3">
                                 <p>Tên sản phẩm</p>
                                 <input type="text" name="name" id="">
-                            </div>
+                              </div>
+                              <div class="row-cols-1 mb-3">
+                                <p>Giá</p>
+                                <input type="text" >
+                              </div>
                             <div class="row-cols-1">
                                 <input type="button" value="Thêm mới">
                                 <input type="reset" value="Nhập lại">
@@ -177,6 +181,7 @@
             $('.menu-item').hide();
             $('.menu-item:first-child').fadeIn();
             $('.menu li').click( function(){
+              // active menu
                 $('.menu li').removeClass('active-style')
                 $(this).addClass('active-style');
                 
@@ -188,6 +193,7 @@
             });
             $('.form-add .btn-products').click(function(){
                 // let id_menu = $(this).children('a').attr('href');
+                
                 $('.menu-item').hide();
                 $('#products').fadeIn();
 

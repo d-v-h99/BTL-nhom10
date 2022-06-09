@@ -24,7 +24,7 @@
               <input id="username" type="text"  name="" placeholder="Enter username">
               <p>Password</p>
               <input id="password"  type="password" name="" placeholder="Enter password">
-              <input type="submit" name="" value="Login">
+              <input id="btn-login" type="submit" name="" value="Login">
               <a href="#">Lost your password?</a><br>
               <a href="#">Don't have an account?</a>
           </form>
@@ -45,5 +45,41 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="/assets/js/main.js"></script>
+    <script>
+      $(document).ready(function(){
+          $('#btn-login').on('click', function(event){
+            event.preventDefault();
+            var un = document.querySelector('#username');
+            var pw = document.querySelector('#password')
+            if(un.value == 'admin' && pw.value == '123456') {
+              location.href = "admin.html"
+            }
+            else if(un.value == '' && pw.value == ''){
+              alert("chưa nhập ");
+            }
+            else{
+              alert('sai')
+            }
+          })
+
+
+
+
+      });
+      // const userName = document.querySelector("#username");
+      // const passWord = document.querySelector("#password");
+      // const btnLogin = document.querySelector('#btn-login');
+
+      // btnLogin.addEventListener('click', function(){
+      //     if(userName.value == 'admin' && passWord.value == '111') {
+      //         document.location = './admin/html';
+      //     }
+      //     else{
+      //         alert("sai")
+      //     }
+          
+      // });
+
+    </script>
   </body>
 </html>
