@@ -259,10 +259,10 @@ body {
 }
 .info_product_size_lish{
     list-style-type: none;
-    display: flex;
+    /*   */
 }
 .info_product_size label{
-    display: flex;
+    /* display: flex; */
 }
 .info_product_notes textarea[name="note"]{
     max-width: 220px;
@@ -278,3 +278,87 @@ div #btn_pay{
     max-width:300px;
 }
 
+.modal-content {
+    background: url("/assets/img/bg_popup.png") no-repeat ;
+    background-size: cover;
+}
+
+.modal-dialog-centered {
+    justify-content: center;
+}
+.info_product_name {
+    font-size: 25px;
+    color: #0C713D;
+    font-weight: 600;
+}
+
+.info_product > div {
+    margin-bottom: 20px;
+    clear: both;
+}
+
+
+.info_product label {
+    float: left;
+    margin-right: 30px;
+    min-width: 70px;
+    line-height: 37px;
+    font-weight: 900;
+}
+.info_product_size_lish >li{
+    display: inline-block;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 2px;
+    font-size: 14px;
+}
+
+.info_product_size_lish  li a {
+    display: inline-block;
+    text-transform: none;
+    border: 1px solid #B3B3B3;
+    border-radius: 2px;
+    background: transparent;
+    margin-left: 2px;
+    padding: 5px 10px;
+    font-weight: 500;
+    font-size: 13px;
+    color: #333;
+}
+.info_product_size_lish li a:hover {
+    color: #fff;
+    background-color: #0C713D;
+    text-decoration: none;
+}
+
+.gia_tien {
+    text-align: center;
+    color: #0C713D;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.add_item span{
+    border: 1px solid #B3B3B3;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-buy-products {
+    border: 1px solid #00713D;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #00713D;
+    background-color: #fff;
+    transition: all 0.2s linear;
+    margin-top: 64px;
+}
+
+.btn-buy-products:hover {
+    background-color: #0C713D;
+    color: #fff;
+}
