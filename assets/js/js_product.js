@@ -184,15 +184,7 @@ var lish_product_bakery = [
         title_Cost : '19.637 đ', 
     },
 ]
-var i=0, j=0
-
-
-
-
-function fuc_click(){
-    console.log(document.querySelectorAll('.item-drink-btn'))
-}
-
+var i=0 , money_sm , money_lg
 
 function Content ({
     title_Vn,
@@ -233,6 +225,7 @@ function Content ({
     )
 
 }
+
 var elementRS = (
         <div className="row">
             {lish_product_drink.map((e) => 
@@ -250,6 +243,9 @@ var elementRS = (
                     modal_name.innerText = e.title_Vn
                     var modal_cost = document.querySelector('.gia_tien')
                     modal_cost.innerText = e.title_Cost
+                    money_sm = e.title_Cost
+                    var modal_cost = document.querySelector('#modal_cost')
+                    modal_cost.innerText = "Thành tiền : " + e.title_Cost
                 }}
                 />  
             )}   
@@ -257,8 +253,6 @@ var elementRS = (
     )
     
     elementRoot.render(elementRS)
-
-
 
     // js các nút chọn menu
     function remove_attribute_active(){
@@ -290,6 +284,9 @@ var elementRS = (
                         modal_name.innerText = e.title_Vn
                         var modal_cost = document.querySelector('.gia_tien')
                         modal_cost.innerText = e.title_Cost
+                        var modal_cost = document.querySelector('#modal_cost')
+                        modal_cost.innerText = "Thành tiền : " + e.title_Cost
+                        money_sm = e.title_Cost
                     }}
                     key = {i++} 
                     />  
@@ -314,14 +311,6 @@ var elementRS = (
                     title_Cost = {e.title_Cost}
                     href = {e.href}  
                     btn = 'Liên hệ'
-                    onclick ={ () => {
-                        var modal_img = document.querySelector('.modal_img')
-                        modal_img.src = e.href 
-                        var modal_name = document.querySelector('.info_product_name')
-                        modal_name.innerText = e.title_Vn
-                        var modal_cost = document.querySelector('.gia_tien')
-                        modal_cost.innerText = e.title_Cost
-                    }} 
                     key = {i++}
                     />  
                 )}   
@@ -352,6 +341,9 @@ var elementRS = (
                             modal_name.innerText = e.title_Vn
                             var modal_cost = document.querySelector('.gia_tien')
                             modal_cost.innerText = e.title_Cost
+                            var modal_cost = document.querySelector('#modal_cost')
+                            modal_cost.innerText = "Thành tiền : " + e.title_Cost
+                            money_sm = e.title_Cost
                         }}
                         key = {i++}
                         />  
@@ -360,6 +352,66 @@ var elementRS = (
             )
             elementRoot.render(elementRS)
         }
+    // 
+
+
+    //click giảm và thêm số lượng của sản phẩm
+    function tinh_tien() {
+        var add_item_index_count = document.querySelector('.index')
+        var modal_cost_gt = document.querySelector('.gia_tien')
+        var gia_tien =  modal_cost_gt.innerText.substring(0, modal_cost_gt.innerText.length-2)
+        var modal_cost = document.querySelector('#modal_cost')
+        modal_cost.innerText = "Thành tiền : " + ( +gia_tien * (+add_item_index_count.innerText) ).toFixed(3).toString() + "đ" 
+    }
+    var add_item_index_1 = document.querySelector('.index--')
+    add_item_index_1.onclick = () => {
+        //giảm index
+        var add_item_index = document.querySelector('.index')
+        add_item_index.innerText > 1 ? add_item_index.innerText = +add_item_index.innerText - 1 : 1  
+        //tính thành tiền
+        tinh_tien()
+    }
+
+    var add_item_index_2 = document.querySelector('.index__')
+    add_item_index_2.onclick = () => {
+        //tăng index
+        var add_item_index = document.querySelector('.index')
+        add_item_index.innerText = +add_item_index.innerText + 1 
+        //tính thành tiền
+        tinh_tien()
+    }
+    var  add_item_close = document.querySelector('.close')
+    add_item_close.onclick = () => {
+        document.querySelector('.index').innerText = 1 
+        var info_product_size_sm = document.querySelector('.info_product_size_lish .sm ')
+        info_product_size_sm.classList.add('active') 
+        }
     
+    
+    // chọn kích thước của sản phẩm
+    function remove_class_size_lish()  {
+        var info_product_size = document.querySelectorAll('.info_product_size_lish li') 
+        info_product_size.forEach(e => e.classList.remove('active'))
+    }
 
+    var info_product_size_sm = document.querySelector('.info_product_size_lish .sm ') 
+    info_product_size_sm.onclick = () => {
+        remove_class_size_lish()
+        info_product_size_sm.classList.add("active")
+        var modal_cost_gt_ = document.querySelector('.gia_tien')
+        var gia_tien_ =  modal_cost_gt_.innerText.substring(0, modal_cost_gt_.innerText.length-2)
+        modal_cost_gt_.innerText = money_sm
+        tinh_tien()
+    }
 
+    var info_product_size_lg = document.querySelector('.info_product_size_lish .lg ') 
+    info_product_size_lg.onclick = () => {
+        remove_class_size_lish()
+        info_product_size_lg.classList.add("active")
+        var modal_cost_gt_ = document.querySelector('.gia_tien')
+        money_lg =  (+money_sm.substring(0, money_sm.length-2) + 10).toString() + " đ"
+        modal_cost_gt_.innerText = money_lg
+        tinh_tien()
+    }
+
+    //

@@ -313,7 +313,7 @@ div #btn_pay{
     font-size: 14px;
 }
 
-.info_product_size_lish  li a {
+.info_product_size_lish  li  {
     display: inline-block;
     text-transform: none;
     border: 1px solid #B3B3B3;
@@ -325,7 +325,7 @@ div #btn_pay{
     font-size: 13px;
     color: #333;
 }
-.info_product_size_lish li a:hover {
+.info_product_size_lish li:hover {
     color: #fff;
     background-color: #0C713D;
     text-decoration: none;
@@ -359,6 +359,10 @@ div #btn_pay{
 }
 
 .btn-buy-products:hover {
+    background-color: #0C713D;
+    color: #fff;
+}
+.info_product_size_lish .active{
     background-color: #0C713D;
     color: #fff;
 }
