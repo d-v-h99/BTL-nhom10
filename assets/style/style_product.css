@@ -53,7 +53,78 @@ body {
     font-size: 12px;
     color:#171717;
 }
-.h_right .h_cart a {
+.h_cart {
+    position: relative;
+}
+.h_cart::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border: 12px #ffd70000 solid;
+    border-bottom-color: #f8f9fa;
+    right: 35px;
+}
+.h_cart:hover .sub-cart {
+    display: block;
+}
+.h_cart .sub-cart {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 44px;
+}
+.cart-content {
+    min-width: 360px;
+    background-color: #fff;
+    padding: 40px 10px;
+    box-shadow: 0 0 15px rgb(112, 106, 106);
+}
+.info-cart {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    font-size: 13px;
+    line-height: 30px;
+
+}
+.info-cart a {
+    margin: 0;
+}
+.info-cart p {
+    font-size: 16px;
+}
+.cart-total {
+    margin: 20px 0;
+    text-align: center;
+}
+.cart-total span {
+    color: #F01B1A;
+    font-size: 24px;
+}
+.cart-pay {
+    
+}
+.cart-pay a {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid #0C713D;
+    border-radius: 5px;
+    width: 250px;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #0C713D;
+    font-size: 13px;
+    transition: all 0.2s linear;
+}
+.cart-pay a:hover {
+    background-color: #00713D;
+    color: #fff;
+}
+
+.h_right .h_cart > a {
     padding: 3px 13px 5px 11px;
     display: block;
     border-radius: 5px;
@@ -65,6 +136,12 @@ body {
 .h_cart .fa{
     font-size: 20px;
 }
+/* Sub cart */
+.h_cart {
+    position: absolute;
+}
+
+
 .h_menu{
     display: flex;
     justify-content: space-around;

@@ -46,26 +46,22 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="/assets/js/main.js"></script>
     <script>
-      $(document).ready(function(){
-          $('#btn-login').on('click', function(event){
-            event.preventDefault();
-            var un = document.querySelector('#username');
-            var pw = document.querySelector('#password')
-            if(un.value == 'admin' && pw.value == '123456') {
-              location.href = "admin.html"
-            }
-            else if(un.value == '' && pw.value == ''){
-              alert("chưa nhập ");
-            }
-            else{
-              alert('sai')
-            }
-          })
-
-
-
-
-      });
+      // $(document).ready(function(){
+      //     $('#btn-login').on('click', function(event){
+      //       event.preventDefault();
+      //       var un = document.querySelector('#username');
+      //       var pw = document.querySelector('#password')
+      //       if(un.value == 'admin' && pw.value == '123456') {
+      //         location.href = "admin.html"
+      //       }
+      //       else if(un.value == '' && pw.value == ''){
+      //         alert("chưa nhập ");
+      //       }
+      //       else{
+      //         alert('sai')
+      //       }
+      //     })
+      // });
       // const userName = document.querySelector("#username");
       // const passWord = document.querySelector("#password");
       // const btnLogin = document.querySelector('#btn-login');
