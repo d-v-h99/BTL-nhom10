@@ -1,5 +1,7 @@
 
 const elementRoot = ReactDOM.createRoot(document.getElementById('root'))
+const elementRoot_1 = ReactDOM.createRoot(document.getElementById('root1'))
+var  liss = []
 
 var lish_product_drink = [
     {
@@ -184,9 +186,9 @@ var lish_product_bakery = [
         title_Cost : '19.637 đ', 
     },
 ]
-var i=0 , money_sm , money_lg
+var i=0 , j=0 , money_sm , money_lg , all_money_cart =0  
 
-function Content ({
+function Product ({
     title_Vn,
     title_En,
     title_Cost,
@@ -229,7 +231,7 @@ function Content ({
 var elementRS = (
         <div className="row">
             {lish_product_drink.map((e) => 
-                <Content 
+                <Product 
                 title_Vn = {e.title_Vn} 
                 title_En = {e.title_En}
                 title_Cost = {e.title_Cost}
@@ -252,30 +254,88 @@ var elementRS = (
         </div>
     )
     
-    elementRoot.render(elementRS)
+elementRoot.render(elementRS)
 
     // js các nút chọn menu
-    function remove_attribute_active(){
-        var listItemDrink = document.querySelectorAll(".title-menu-cr li ")
-            listItemDrink.forEach((e) => {
-                e.classList.remove('active')
-            })
-    }
+function remove_attribute_active(){
+    var listItemDrink = document.querySelectorAll(".title-menu-cr li ")
+        listItemDrink.forEach((e) => {
+            e.classList.remove('active')
+        })
+}
 
-    var click_drink = document.getElementById('title-menu-div-2-drink')
-    click_drink.onclick = () => {
-        remove_attribute_active()
-        document.querySelector(".title-menu-li-1").classList.add("active")
-        document.querySelector(".title-h1").innerHTML = "thức uống"
-        document.querySelector(".title-menu-a-1-1").innerHTML = "thức uống"
+var click_drink = document.getElementById('title-menu-div-2-drink')
+click_drink.onclick = () => {
+    remove_attribute_active()
+    document.querySelector(".title-menu-li-1").classList.add("active")
+    document.querySelector(".title-h1").innerHTML = "thức uống"
+    document.querySelector(".title-menu-a-1-1").innerHTML = "thức uống"
+    elementRS = (
+        <div className="row">
+            {lish_product_drink.map((e) => 
+                <Product 
+                title_Vn = {e.title_Vn} 
+                title_En = {e.title_En}
+                title_Cost = {e.title_Cost}
+                href = {e.href} 
+                btn = 'Đặt hàng' 
+                onclick ={ () => {
+                    var modal_img = document.querySelector('.modal_img')
+                    modal_img.src = e.href 
+                    var modal_name = document.querySelector('.info_product_name')
+                    modal_name.innerText = e.title_Vn
+                    var modal_cost = document.querySelector('.gia_tien')
+                    modal_cost.innerText = e.title_Cost
+                    var modal_cost = document.querySelector('#modal_cost')
+                    modal_cost.innerText = "Thành tiền : " + e.title_Cost
+                    money_sm = e.title_Cost
+                }}
+                key = {i++} 
+                />  
+            )}   
+        </div>
+    )
+    elementRoot.render(elementRS)
+}
+
+var click_snacks = document.getElementById('title-menu-div-2-snacks');
+click_snacks.onclick = function ()  {
+    remove_attribute_active()
+    document.querySelector(".title-menu-li-2").classList.add("active")
+    document.querySelector(".title-h1").innerHTML = "snacks"
+    document.querySelector(".title-menu-a-1-1").innerHTML = "snacks"
+    elementRS = (
+        <div className="row">
+            {lish_product_snacks.map((e) => 
+                <Product 
+                title_Vn = {e.title_Vn} 
+                title_En = {e.title_En}
+                title_Cost = {e.title_Cost}
+                href = {e.href}  
+                btn = 'Liên hệ'
+                key = {i++}
+                /> 
+
+            )}   
+        </div>
+    )
+    elementRoot.render(elementRS)
+}
+
+var click_bakery = document.getElementById('title-menu-div-2-bakery');
+click_bakery.onclick = function ()  {
+    remove_attribute_active()
+    document.querySelector(".title-menu-li-3").classList.add("active")
+    document.querySelector(".title-h1").innerHTML = "bakery"
+    document.querySelector(".title-menu-a-1-1").innerHTML = "bakery"
         elementRS = (
             <div className="row">
-                {lish_product_drink.map((e) => 
-                    <Content 
+                {lish_product_bakery.map((e) => 
+                    <Product 
                     title_Vn = {e.title_Vn} 
-                    title_En = {e.title_En}
+                    title_En = ''
                     title_Cost = {e.title_Cost}
-                    href = {e.href} 
+                    href = {e.href}  
                     btn = 'Đặt hàng' 
                     onclick ={ () => {
                         var modal_img = document.querySelector('.modal_img')
@@ -288,29 +348,6 @@ var elementRS = (
                         modal_cost.innerText = "Thành tiền : " + e.title_Cost
                         money_sm = e.title_Cost
                     }}
-                    key = {i++} 
-                    />  
-                )}   
-            </div>
-        )
-        elementRoot.render(elementRS)
-    }
-
-    var click_snacks = document.getElementById('title-menu-div-2-snacks');
-    click_snacks.onclick = function ()  {
-        remove_attribute_active()
-        document.querySelector(".title-menu-li-2").classList.add("active")
-        document.querySelector(".title-h1").innerHTML = "snacks"
-        document.querySelector(".title-menu-a-1-1").innerHTML = "snacks"
-        elementRS = (
-            <div className="row">
-                {lish_product_snacks.map((e) => 
-                    <Content 
-                    title_Vn = {e.title_Vn} 
-                    title_En = {e.title_En}
-                    title_Cost = {e.title_Cost}
-                    href = {e.href}  
-                    btn = 'Liên hệ'
                     key = {i++}
                     />  
                 )}   
@@ -318,100 +355,158 @@ var elementRS = (
         )
         elementRoot.render(elementRS)
     }
+// 
 
-    var click_bakery = document.getElementById('title-menu-div-2-bakery');
-    click_bakery.onclick = function ()  {
-        remove_attribute_active()
-        document.querySelector(".title-menu-li-3").classList.add("active")
-        document.querySelector(".title-h1").innerHTML = "bakery"
-        document.querySelector(".title-menu-a-1-1").innerHTML = "bakery"
-            elementRS = (
-                <div className="row">
-                    {lish_product_bakery.map((e) => 
-                        <Content 
-                        title_Vn = {e.title_Vn} 
-                        title_En = ''
-                        title_Cost = {e.title_Cost}
-                        href = {e.href}  
-                        btn = 'Đặt hàng' 
-                        onclick ={ () => {
-                            var modal_img = document.querySelector('.modal_img')
-                            modal_img.src = e.href 
-                            var modal_name = document.querySelector('.info_product_name')
-                            modal_name.innerText = e.title_Vn
-                            var modal_cost = document.querySelector('.gia_tien')
-                            modal_cost.innerText = e.title_Cost
-                            var modal_cost = document.querySelector('#modal_cost')
-                            modal_cost.innerText = "Thành tiền : " + e.title_Cost
-                            money_sm = e.title_Cost
-                        }}
-                        key = {i++}
-                        />  
-                    )}   
+
+//click giảm và thêm số lượng của sản phẩm
+function tinh_tien() {
+    var add_item_index_count = document.querySelector('.index')
+    var modal_cost_gt = document.querySelector('.gia_tien')
+    var gia_tien =  modal_cost_gt.innerText.substring(0, modal_cost_gt.innerText.length-2)
+    var modal_cost = document.querySelector('#modal_cost')
+    modal_cost.innerText = "Thành tiền : " + ( +gia_tien * (+add_item_index_count.innerText) ).toFixed(3).toString() + "đ" 
+}
+var add_item_index_1 = document.querySelector('.index--')
+add_item_index_1.onclick = () => {
+    //giảm index
+    var add_item_index = document.querySelector('.index')
+    add_item_index.innerText > 1 ? add_item_index.innerText = +add_item_index.innerText - 1 : 1  
+    //tính thành tiền
+    tinh_tien()
+}
+
+var add_item_index_2 = document.querySelector('.index__')
+add_item_index_2.onclick = () => {
+    //tăng index
+    var add_item_index = document.querySelector('.index')
+    add_item_index.innerText = +add_item_index.innerText + 1 
+    //tính thành tiền
+    tinh_tien()
+}
+var  add_item_close = document.querySelector('.close')
+add_item_close.onclick = () => {
+    document.querySelector('.index').innerText = 1 
+    var info_product_size_sm = document.querySelector('.info_product_size_lish .sm ')
+    info_product_size_sm.classList.add('active') 
+    }
+
+
+// chọn kích thước của sản phẩm
+function remove_class_size_lish()  {
+    var info_product_size = document.querySelectorAll('.info_product_size_lish li') 
+    info_product_size.forEach(e => e.classList.remove('active'))
+}
+
+var info_product_size_sm = document.querySelector('.info_product_size_lish .sm ') 
+info_product_size_sm.onclick = () => {
+    remove_class_size_lish()
+    info_product_size_sm.classList.add("active")
+    var modal_cost_gt_ = document.querySelector('.gia_tien')
+    var gia_tien_ =  modal_cost_gt_.innerText.substring(0, modal_cost_gt_.innerText.length-2)
+    modal_cost_gt_.innerText = money_sm
+    tinh_tien()
+}
+
+var info_product_size_lg = document.querySelector('.info_product_size_lish .lg ') 
+info_product_size_lg.onclick = () => {
+    remove_class_size_lish()
+    info_product_size_lg.classList.add("active")
+    var modal_cost_gt_ = document.querySelector('.gia_tien')
+    money_lg =  (+money_sm.substring(0, money_sm.length-2) + 10).toString() + " đ"
+    modal_cost_gt_.innerText = money_lg
+    tinh_tien()
+}
+
+
+function Cart_product ({
+    img,
+    name,
+    size,
+    index,
+    cost,
+    count,
+    remove_product,
+    
+})
+{
+    return <li className = {'remove-' + count.toString() }>
+            <div id="box-product">
+                <img src={img} alt="" className="box-product-img"></img>
+                <div className="product-info">
+                    <div className="product-info-name text-uppercase">{name}</div>
+                    <div className="product-info-size">{size}</div>
+                    <div className="product-info-index">{ index + ' x ' + cost}</div>
                 </div>
-            )
-            elementRoot.render(elementRS)
-        }
-    // 
+                <button type="button" className='close' onClick={remove_product} >&times;</button>
+                </div>
+            </li>
+        
+}
 
 
-    //click giảm và thêm số lượng của sản phẩm
-    function tinh_tien() {
-        var add_item_index_count = document.querySelector('.index')
-        var modal_cost_gt = document.querySelector('.gia_tien')
-        var gia_tien =  modal_cost_gt.innerText.substring(0, modal_cost_gt.innerText.length-2)
-        var modal_cost = document.querySelector('#modal_cost')
-        modal_cost.innerText = "Thành tiền : " + ( +gia_tien * (+add_item_index_count.innerText) ).toFixed(3).toString() + "đ" 
-    }
-    var add_item_index_1 = document.querySelector('.index--')
-    add_item_index_1.onclick = () => {
-        //giảm index
-        var add_item_index = document.querySelector('.index')
-        add_item_index.innerText > 1 ? add_item_index.innerText = +add_item_index.innerText - 1 : 1  
-        //tính thành tiền
-        tinh_tien()
-    }
 
-    var add_item_index_2 = document.querySelector('.index__')
-    add_item_index_2.onclick = () => {
-        //tăng index
-        var add_item_index = document.querySelector('.index')
-        add_item_index.innerText = +add_item_index.innerText + 1 
-        //tính thành tiền
-        tinh_tien()
-    }
-    var  add_item_close = document.querySelector('.close')
-    add_item_close.onclick = () => {
-        document.querySelector('.index').innerText = 1 
-        var info_product_size_sm = document.querySelector('.info_product_size_lish .sm ')
-        info_product_size_sm.classList.add('active') 
-        }
+var btn_pay = document.querySelector('.btn_pay')
+btn_pay.onclick = () => {
+    var product_img = document.querySelector('.modal_img')
+    var product_name = document.querySelector('.info_product_name')
+    var product_size = document.querySelector('.info_product_size_lish .active')
+    var product_index = document.querySelector('.index')
+    var product_cost = document.querySelector('.gia_tien')
+
+    liss.push({ id : ++j,
+                img : product_img.src,
+                name : product_name.innerText,
+                size : product_size.innerText,
+                index : product_index.innerText,
+                cost : product_cost.innerText,
+
+            })
+    // tính tổng tiền
+    all_money_cart =0
+    liss.map(e => all_money_cart += +e.index *e.cost.substring(0, e.cost.length-2))
+
+     var buy_product = (
+                    <ul>
+                        {liss.map(e => 
+                            <Cart_product
+                                img = {e.img}
+                                name = {e.name}
+                                size = {e.size}
+                                index = {e.index}
+                                cost = {e.cost}
+                                key = {e.id}
+                                count = {e.id}
+                                
+                                remove_product ={ () => {
+                                    var cart_remove_product = document.querySelector('.remove-' + e.id.toString() )
+                                    cart_remove_product.remove()
+
+                                    for(var i_pr=0 ; i_pr<liss.length ; i_pr++){
+                                        if(liss[i_pr].id == e.id){
+                                            all_money_cart -= +e.index * liss[i_pr].cost.substring(0, e.cost.length-2) 
+                                            liss.splice(i_pr,1)
+                                            
+                                        }
+                                    }
+
+                                    all_money_cart != 0 
+                                        ? document.querySelector(".cart-total span").innerText = all_money_cart.toFixed(3).toString() + " đ" 
+                                        : document.querySelector(".cart-total span").innerText = '0 đ'
+
+                                }}
+                            />
+                            
+                        )}
+                    </ul>
+                )
+    document.querySelector(".cart-total span").innerText = all_money_cart.toFixed(3).toString() + " đ"                            
     
     
-    // chọn kích thước của sản phẩm
-    function remove_class_size_lish()  {
-        var info_product_size = document.querySelectorAll('.info_product_size_lish li') 
-        info_product_size.forEach(e => e.classList.remove('active'))
+    
+    // cho số lượng khi thoát thành 1
+    product_index.innerText = 1 
+    
+    elementRoot_1.render(buy_product)
     }
+    
 
-    var info_product_size_sm = document.querySelector('.info_product_size_lish .sm ') 
-    info_product_size_sm.onclick = () => {
-        remove_class_size_lish()
-        info_product_size_sm.classList.add("active")
-        var modal_cost_gt_ = document.querySelector('.gia_tien')
-        var gia_tien_ =  modal_cost_gt_.innerText.substring(0, modal_cost_gt_.innerText.length-2)
-        modal_cost_gt_.innerText = money_sm
-        tinh_tien()
-    }
-
-    var info_product_size_lg = document.querySelector('.info_product_size_lish .lg ') 
-    info_product_size_lg.onclick = () => {
-        remove_class_size_lish()
-        info_product_size_lg.classList.add("active")
-        var modal_cost_gt_ = document.querySelector('.gia_tien')
-        money_lg =  (+money_sm.substring(0, money_sm.length-2) + 10).toString() + " đ"
-        modal_cost_gt_.innerText = money_lg
-        tinh_tien()
-    }
-
-    //
