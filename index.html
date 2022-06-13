@@ -77,14 +77,22 @@
                     </div>
                 </li>
                 <li><a href="">VỀ CHÚNG TÔI</a></li>
-                <li><i class="fa fa-search"></i></li>
+                <li class="menu"><i class="fa fa-search"></i>
+                    <div class="menu-sub">
+                        <ul class="menu-sub-content">
+                            <li class="menu-sub-item">Sản phẩm cà phê</li>
+                            <li class="menu-sub-item">Sản phẩm trà</li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- <li><i class="fa fa-search"></i></li> -->
             </ul>
         </div>
     </div>
     <!-- end header -->
 
     <!-- begin slide  -->
-    <div class="container-fluid slider">
+    <!-- <div class="container-fluid slider">
         <div class="row">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
@@ -108,16 +116,58 @@
                 </a>
             </div>
         </div>
-    </div>
+    </div> -->
+    
+    <!-- slide ver 2 -->
+    <div class="slide-wrapper">
+        <div class="cacslide">
+       <ul>
+           <li class="active">
+               <div class="motslide">
+                   <div class="anh" style="background-image: url(./assets/img/slide1.png)"></div>
+               </div>
+           </li>
+           <li>
+               <div class="motslide">
+                   <div class="anh" style="background-image: url(./assets/img/slide2.png)"></div>
+               </div>
+           </li>
+           <li>
+               <div class="motslide">
+                   <div class="anh" style="background-image: url(./assets/img/slide3.png)"></div>
+               </div>
+           </li>
+           <li>
+               <div class="motslide">
+                   <div class="anh" style="background-image: url(./assets/img/slide4.png)"></div>
+               </div>
+           </li>
+       </ul>
+   </div>
+   <div class="chuyenslide">
+       <ul>
+           <li class="kichhoat">1</li>
+           <li>2</li>
+           <li>3</li>
+           <li>4</li>
+       </ul>
+   </div>
+   <div class="nuts">
+    
+       <b class="trai"><i class="fa fa-angle-left"></i></b>
+        <b class="phai"><i class="fa fa-angle-right"></i></b>
+     </div>
+   </div>
+  
     <!-- end slide -->
 
     <!-- begin content -->
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-sm-12">
+            <div class="col-md-6 col-sm-12 animation_2">
                 <img src="./assets/img/content_1.jpg" class="img_content1">
             </div>
-            <div class="col-md-6 col-sm-12">
+            <div class="col-md-6 col-sm-12 animation_3">
                 <h3 class="title">TỪ NHỮNG MẦM TRÀ, CHÚNG TÔI TẠO RA NIỀM ĐAM MÊ</h3>
                 <p>Trải qua hơn&nbsp;50 năm chắt chiu tinh hoa từ những búp trà xanh và hạt cà phê thượng hạng
                     cùng mong muốn mang lại cho khách hàng những trải nghiệm giá trị nhất khi thưởng thức,
@@ -133,7 +183,7 @@
             </div>
 
         </div>
-        <div class="row content">
+        <div class="row content animation_1">
             <div class="col-md-6 col-sm-12">
                 <h3 class="title">ĐỘI NGŨ NHÂN VIÊN TRÀN ĐẦY NHIỆT HUYẾT</h3>
                 <p>Trong suốt quá trình hoạt động và phát triển, đội ngũ quản lý và nhân viên của Phúc Long
@@ -367,8 +417,9 @@
 
     <!-- begin backtop -->
     <a class="back_top" href="#"><i class="fa fa-angle-up fa-3x"></i></a>
+    <a class="back_top" href="#"><i class="fa fa-angle-up fa-3x"></i></a>
     <!-- end backtop -->
-
+    <script src="./assets/js/js_index.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
