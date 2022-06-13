@@ -146,6 +146,47 @@ body {
 }
 
 
+/* css lại đây */
+.product-info {
+    flex-direction: column;
+}
+.products ul li div{
+    display: flex; 
+    flex: 1;
+}
+.products ul li {
+    width: 100%;
+}
+
+.box-product-img{
+    width:80px;
+    height: 80px;
+    margin : 0px 10px 0px 5px;
+}
+.product-info-name{
+    font-size: 16px;
+    font-weight: bold;
+}
+#box-product{
+    width: 100%;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    padding: 7.5px;
+}
+.product-info-size{
+    font-style:italic;
+    font-size:13px;
+    margin: 1px 0px
+}
+.product-info-index{
+    font-size:16px;
+}
+
+/*  */
+
+
+
+
 .h_menu{
     display: flex;
     justify-content: space-around;
