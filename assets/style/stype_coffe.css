@@ -6,8 +6,16 @@
 body {
     font-family: 'BIZ UDPGothic', sans-serif;
 }
+html{
+    scroll-behavior: smooth;
+}
+.container{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 /* begin header */
-
+ 
 .header_1{
     position: fixed;
     width: 100%;
@@ -28,7 +36,7 @@ body {
 .h_logo img{
     max-width: 70px;
     flex: 1;
-} 
+}
 .h_right ul li{
     display: inline-block;
 }
@@ -49,6 +57,7 @@ body {
 }
 .h_right .language-last a{
     border-right: none;
+    padding-left: 0px;
     padding-right: 5px;
     font-size: 12px;
     color:#171717;
@@ -140,22 +149,31 @@ body {
 }
 /* css sub-menu end */
 /* end header */
-
+ 
 /* begin content  */
+a{
+    text-decoration: none !important;
+}
 .img_coffe1{
     margin-top: 122px;
     width: 100%;
 }
-
+@media screen and (max-width:565px) {
+    .img_coffe1 {
+        width: 100%;
+        height: 10rem;
+    }
+}
 .breadcrumb{
     background-color: #fff !important;
 }
 .first{
     color: #aeb5bb;
-    text-decoration: none !important;
+    padding: 0px;
 }
 .second{
     color: black;
+    padding: 0px;
 }
 .head_coffe:hover{
     color: red;
@@ -166,24 +184,36 @@ body {
 }
 #header_col{
     margin-top: 30px;
-    /* margin-left: 55px; */
+    margin-bottom: 0px;
     font-family: 'Lora', serif;
     color: #0C713D;
     font-size: 22px;
+    list-style-type: none;
+    line-height: 40px;
+    justify-content: center;
 }
-@media screen and (max-width:565px) {
-    .img_coffe1 {
-        width: 100%;
-        height: 10rem;
+.container ul#header_col li{
+    display: inline-block;
+}
+@media only screen and (max-width:767px) {
+    .container ul#header_col li{
+        display: block;
     }
 }
-
-.page_coffe:hover{
-    color: red;
+.tab-item:hover{
+    background-color: #EEEEEE;
 }
 .img_content_head{
     margin-top: 90px;
+    height: 320px;
+    width: 100%;  
+}
+.img_content{
     width: 100%;
+    border-radius: 50%;
+    max-width: 280px;
+    background: #fff;
+    box-shadow: 0px 0px 8px 0 rgb(205 205 205 / 50%);
 }
 .bg-img{
     background-image: url(/assets/img/bg_coffe.png);
@@ -198,16 +228,19 @@ body {
     position: relative;
     top: 100px;
 }
-.img_content{
-    width: 100%;
-    border-radius: 50%;
-    max-width: 280px;
-    background: #fff;
-    box-shadow: -4px -4px 8px 0 rgb(205 205 205 / 50%), 4px 4px 8px 0 rgb(205 205 205 / 50%);
+li a{
+    color: black;
+    padding: 0px 30px;
+    display: flex;
+    justify-content: center;
 }
-.active button{
+li.active a {
+    color: #00713D;
     border-top:1px solid #0C713D ;
     border-bottom:1px solid #0C713D;
+}
+li a:hover{
+    color: #00713D;
 }
 
 .tab-content{
@@ -216,24 +249,18 @@ body {
 .active-content{
     display: block;
 }
-button{
-    background-color: white;
-    color: #0C713D;
-    border: none;
-}
 h3{
     position: relative;
     padding-top: 150px;
-    font-size: 2rem;
+    font-size: 17px;
 }
 p{
     position: relative;
     font-size: 1.25rem;
-    line-height: 35px;
+    line-height: 30px;
 }
 .pag{
-    line-height: 35px;
-    padding-top: 100px;
+    padding-top: 85px;
 }
 
 /* end content  */
@@ -262,12 +289,29 @@ p{
     width: 30px;
     height: 50px;
     padding: 0px 0 0 10px;
-     filter: grayscale(0);
+    filter: grayscale(0);
 }
 .f-social li:hover{
-     filter: grayscale(100%);
+    filter: grayscale(100%);
 }
 #footer_begin{
     margin-top: 30px;
 }
+.btn-icon{
+    padding: 0px !important;
+}
 /* end footer */
+ 
+ 
+/* begin backtop  */
+.backtop{
+    font-size: 35px;
+    color: #0C713D;
+    /* cố định vị trí của nút backtop trên màn hình  */
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 50px;
+    right: 30px;
+}
+/* end backtop  */
