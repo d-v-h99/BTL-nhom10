@@ -198,7 +198,21 @@ body {
 }
 
 /*  */
-
+.f-social li{
+    display: inline-block;
+}
+.f-social li i{
+    width: 30px;
+    height: 50px;
+    padding: 0px 0 0 10px;
+     filter: grayscale(0);
+}
+.f-social li:hover{
+     filter: grayscale(100%);
+}
+#img-noti{
+   width: 165px;
+}
 
 
 
