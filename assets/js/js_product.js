@@ -447,6 +447,7 @@ function Cart_product ({
 
 var btn_pay = document.querySelector('.btn_pay')
 btn_pay.onclick = () => {
+
     var product_img = document.querySelector('.modal_img')
     var product_name = document.querySelector('.info_product_name')
     var product_size = document.querySelector('.info_product_size_lish .active')
@@ -466,7 +467,7 @@ btn_pay.onclick = () => {
     liss.map(e => all_money_cart += +e.index *e.cost.substring(0, e.cost.length-2))
 
      var buy_product = (
-                    <ul>
+                    <ul className="Cart_ListProduct">
                         {liss.map(e => 
                             <Cart_product
                                 img = {e.img}
@@ -479,13 +480,12 @@ btn_pay.onclick = () => {
                                 
                                 remove_product ={ () => {
                                     var cart_remove_product = document.querySelector('.remove-' + e.id.toString() )
-                                    cart_remove_product.remove()
+                                    cart_remove_product.setAttribute("style" , "display : none;") 
 
                                     for(var i_pr=0 ; i_pr<liss.length ; i_pr++){
                                         if(liss[i_pr].id == e.id){
                                             all_money_cart -= +e.index * liss[i_pr].cost.substring(0, e.cost.length-2) 
-                                            liss.splice(i_pr,1)
-                                            
+                                            liss.splice(i_pr,1)     
                                         }
                                     }
 
@@ -500,8 +500,6 @@ btn_pay.onclick = () => {
                     </ul>
                 )
     document.querySelector(".cart-total span").innerText = all_money_cart.toFixed(3).toString() + " đ"                            
-    
-    
     
     // cho số lượng khi thoát thành 1
     product_index.innerText = 1 
