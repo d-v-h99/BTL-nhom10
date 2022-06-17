@@ -145,6 +145,20 @@ body {
     color: #fff;
 }
 
+/*img */
+.header_img{
+    position: relative;
+    overflow: hidden;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.slide{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 /* css lại đây */
 .product-info {
@@ -274,6 +288,7 @@ body {
     text-align: center;
 }
 .title-menu{
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
