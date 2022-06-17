@@ -6,127 +6,283 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/style/style_admin.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
 
     <title>Admin</title>
 </head>
 <body>
     <div class="box-center">
-        <div class="row-cols-1 mb header">
-            <h1>Admin</h1>
+        <div class="mb header">
+            <h1>Admin</h1><i id="logout" class="fas fa-sign-out-alt"></i>
         </div>
         <div class="row-cols-1 menu">
-            <ul>
-                <li class="active-style"><a  href="#add">Trang chủ</a></li>
-                <li><a  href="#products">Sản phẩm</a></li>
-                <li><a href="#user">Khách hàng</a></li>
-                <li><a  href="#coment">Bình luận</a></li>
-                <li><a  href="#posts">Bài viết</a></li>
-                <li><a  href="#statistical">Thống kê</a></li>
-            </ul>
+            <nav class="nav-pc">
+              <ul class="menu-list">
+                  <li class="active-style"><a  href="#admin">Trang chủ</a></li>
+                  <li><a  href="#products">Sản phẩm</a></li>
+                  <li><a href="#user">Khách hàng</a></li>
+                  <li><a  href="#coment">Bình luận</a></li>
+                  <li><a  href="#posts">Bài viết</a></li>
+                  <li><a  href="#statistical">Thống kê</a></li>
+              </ul>
+            </nav>
+            <lable class="btn-nav"><i class="fas fa-bars nav-btn"></i></lable>
+            <label for="" class="nav-overlay"></label>
         </div>
        <div  class="menu-content">
-           <div id="add" class="row-cols-1 menu-item">
-           
-                    <div class="form-add">
-                        <form action="#" method="post">
-                            <div class="row-cols-1 mb-3">
-                                <p>Mã sản phẩm</p>
-                                <input type="text" name="id" id="">
-                            </div>
-                            <div class="row-cols-1 mb-3">
-                                <p>Tên sản phẩm</p>
-                                <input type="text" name="name" id="">
-                              </div>
-                              <div class="row-cols-1 mb-3">
-                                <p>Giá</p>
-                                <input type="text" >
-                              </div>
-                            <div class="row-cols-1">
-                                <input type="button" value="Thêm mới">
-                                <input type="reset" value="Nhập lại">
-                                <a href="#products" class="btn-products"><input type="button" value="Danh sách" ></a>
-                            </div>
-                        </form>
+           <div id="admin" class="row-cols-1 menu-item">
+             <div  class="container-fluid admin-wrapper">
+                <div class="row">
+                  <div class="col-xl-3 col-sm-6">
+                    <div class="card-box text-right">
+                      <div class="media">
+                        <div class="avatar align-self-center rounded-circle ">
+                          <i class="fas fa-dollar-sign avatar-title font-30 text-white"></i>
+                       
+
+                        </div>
+                        <div class="box-content media-body  ">
+                          <p class="m-0 text-uppercase font-weight-normal text-truncate">Tổng doanh thu</p>
+                          <h3 class="font-weight-normal text-truncate text-truncate"> <span>5.123.000đ</span></h3>
+                          <p class="m-0">20-1-2022</p>
+                        </div>
+                      </div>
                     </div>
-           
-           </div>
-           <div id="products" class="row-cols-1 menu-item">
-               <div class="container-products">
-                 <table class="table table-hover products-list">
-                         <thead>
-                           <tr>
-                             <th scope="col">#</th>
-                             <th scope="col">Mã sản phẩm</th>
-                             <th scope="col">Tên sản phẩm</th>
-                             <th scope="col">Giá</th>
-                             <th scope="col">#</th>
-                           </tr>
-                         </thead>
-                         <tbody>
-                           <tr>
-                             <th scope="row"><input  type="checkbox" name="" id=""></th>
-                             <td>0001</td>
-                             <td>Caramen Chảy</td>
-                             <td>4000 đ</td>
-                             <td><input type="button" value="Sửa"><input type="button" value="Xóa"></td>
-                           </tr>
-                           <tr>
-                             <th scope="row"><input  type="checkbox" name="" id=""></th>
-                             <td>0002</td>
-                             <td>Cappuchino - Vietnamo</td>
-                             <td>4000 đ</td>
-                             <td><input type="button" value="Sửa"><input type="button" value="Xóa"></td>
-                           </tr>
-                           <tr>
-                             <th scope="row"><input  type="checkbox" name="" id=""></th>
-                             <td>0003</td>
-                             <td>Latte Latte</td>
-                             <td>4000 đ</td>
-                             <td><input type="button" value="Sửa"><input type="button" value="Xóa"></td>
-                           </tr>
-                           <tr>
-                             <th scope="row"><input  type="checkbox" name="" id=""></th>
-                             <td>0004</td>
-                             <td>Ngọc Viễn Đông</td>
-                             <td>4000 đ</td>
-                             <td><input type="button" value="Sửa"><input type="button" value="Xóa"></td>
-                           </tr>
-                           <tr>
-                             <th scope="row"><input  type="checkbox" name="" id=""></th>
-                             <td>0005</td>
-                             <td>Phin Bọt Biển</td>
-                             <td>4000 đ</td>
-                             <td><input type="button" value="Sửa"><input type="button" value="Xóa"></td>
-                           </tr>
-                           <tr>
-                             <th scope="row"><input  type="checkbox" name="" id=""></th>
-                             <td>0006</td>
-                             <td>Phin Sữa Đá - Năng Lượng</td>
-                             <td>4000 đ</td>
-                             <td><input type="button" value="Sửa"><input type="button" value="Xóa"></td>
-                           </tr>
-                           <tr>
-                             <th scope="row"><input  type="checkbox" name="" id=""></th>
-                             <td>0007</td>
-                             <td>Phin Đen Đá - Đậm Đà</td>
-                             <td>4000 đ</td>
-                             <td><input type="button" value="Sửa"><input type="button" value="Xóa"></td>
-                           </tr>
-                           <tr>
-                             <th scope="row"><input  type="checkbox" name="" id=""></th>
-                             <td>0008</td>
-                             <td>Sữa Chua Phúc Bồn Tử Đác Cam</td>
-                             <td>4000 đ</td>
-                             <td><input type="button" value="Sửa"><input type="button" value="Xóa"></td>
-                           </tr>
-                       </table>
-                       <div class="row-cols-1">
-                           <input type="button" value="Chọn tất cả">
-                           <input type="reset" value="Bỏ chọn tất cả">
-                           <input type="button" value="Xóa các mục đã chọn">
-                           <a href="#add" class="btn-add"><input type="button" value="Nhập thêm"></a>
+                  </div>
+                  <div class="col-xl-3 col-sm-6">
+                    <div class="card-box text-right">
+                      <div class="media">
+                        <div class="avatar align-self-center  rounded-circle bg-info">
+                          <i class="fas fa-user avatar-title font-30 text-white"></i>
+                        </div>
+                        <div class="box-content media-body  ">
+                          <p class="m-0 text-uppercase font-weight-normal text-truncate">Người truy cập</p>
+                          <h3 class="font-weight-normal text-truncate"> <span>26.521</span></h3>
+                          <p class="m-0">20-1-2022</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-sm-6">
+                    <div class="card-box text-right">
+                      <div class="media">
+                        <div class="avatar align-self-center rounded-circle bg-warning">
+                          <i class="fas fa-crown avatar-title font-30 text-white"></i>
+                       
+
+                        </div>
+                        <div class="box-content media-body  ">
+                          <p class="m-0 text-uppercase font-weight-normal text-truncate">SỐ LƯỢNG GIAO DỊCH</p>
+                          <h3 class="font-weight-normal text-truncate"> <span>7.842</span></h3>
+                          <p class="m-0">20-1-2022</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-sm-6">
+                    <div class="card-box text-right">
+                      <div class="media">
+                        <div class="avatar align-self-center rounded-circle bg-danger">
+                          <i class="fas fa-comment-dots avatar-title font-30 text-white"></i>
+                       
+
+                        </div>
+                        <div class="box-content media-body  ">
+                          <p class="m-0 text-uppercase font-weight-normal text-truncate">Lượt bình luận</p>
+                          <h3 class="font-weight-normal text-truncate "> <span>2.073</span></h3>
+                          <p class="m-0">20-1-2022</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xl-3 col-sm-6">
+                    <div class="card-box card-user">
+                        <img src="./assets/img/admin-avatar.png" class="img-fluid rounded-circle avatar-ad" alt="">
+                        <div class="user-info">
+                          <h5 class="mt-3 mb-1">HuanBa</h5>
+                          <p class="text-muted m-0">Huan@gmail.com</p>
+                          <div class="user-position">
+                              <span class="text-warning ">
+                                  <font style="vertical-align: inherit;">Quản trị viên</font>
+                              </span>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-sm-6">
+                    <div class="card-box card-user">
+                        <img src="./assets/img/admin-avatar.png" class="img-fluid rounded-circle avatar-ad" alt="">
+                        <div class="user-info">
+                          <h5 class="mt-3 mb-1">HoangDo</h5>
+                          <p class="text-muted m-0">HoangDo@gmail.com</p>
+                          <div class="user-position">
+                              <span class="text-danger ">
+                                  <font style="vertical-align: inherit;">Quản trị viên</font>
+                              </span>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-sm-6">
+                    <div class="card-box card-user">
+                        <img src="./assets/img/admin-avatar.png" class="img-fluid rounded-circle avatar-ad" alt="">
+                        <div class="user-info">
+                          <h5 class="mt-3 mb-1">VietHoan</h5>
+                          <p class="text-muted m-0">VietHoan@gmail.com</p>
+                          <div class="user-position">
+                              <span class="text-info ">
+                                  <font style="vertical-align: inherit;">Quản trị viên</font>
+                              </span>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-sm-6">
+                    <div class="card-box card-user">
+                        <img src="./assets/img/admin-avatar.png" class="img-fluid rounded-circle avatar-ad" alt="">
+                        <div class="user-info">
+                          <h5 class="mt-3 mb-1">DoHuy</h5>
+                          <p class="text-muted m-0">DoHuy@gmail.com</p>
+                          <div class="user-position">
+                              <span class="text-success ">
+                                  <font style="vertical-align: inherit;">Quản trị viên</font>
+                              </span>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="row">
+
+                </div>
+             </div>
+          </div>
+          <div id="products" style="margin: 0;" class="row menu-item">
+             <div class="col col-md-4">
+               <div class="form-add">
+                   <form action="#" method="post">
+                       <div class="row-cols-1 mb-3">
+                           <p>Mã sản phẩm</p>
+                           <input type="text" name="id" id="">
                        </div>
+                       <div class="row-cols-1 mb-3">
+                           <p>Tên sản phẩm</p>
+                           <input type="text" name="name" id="">
+                         </div>
+                         <div class="row-cols-1 mb-3">
+                           <p>Giá</p>
+                           <input type="text" >
+                         </div>
+                       <div class="row-cols-1">
+                           <input type="button" value="Thêm mới">
+                           <input type="reset" value="Nhập lại">
+                          
+                       </div>
+                   </form>
                </div>
+             </div>
+                 <div class="col col-md-8">
+                    <div class="table-wrapper">
+                      <table class="table table-hover products-list">
+                             <thead>
+                               <tr>
+                                 <th scope="col">#</th>
+                                 <th scope="col">Mã sản phẩm</th>
+                                 <th scope="col">Tên sản phẩm</th>
+                                 <th scope="col">Giá</th>
+                                 <th scope="col">#</th>
+                               </tr>
+                             </thead>
+                             <tbody>
+                               <tr>
+                                 <td scope="row"><input  type="checkbox" name="" id=""></td>
+                                 <td>0001</td>
+                                 <td>Caramen Chảy</td>
+                                 <td>4000 đ</td>
+                                 <td><input type="button" value="Sửa"><input type="button" value="Xóa"></td>
+                               </tr>
+                               <tr>
+                                 <td scope="row"><input  type="checkbox" name="" id=""></td>
+                                 <td>0002</td>
+                                 <td>Cappuchino - Vietnamo</td>
+                                 <td>4000 đ</td>
+                                 <td><input type="button" value="Sửa"><input type="button" value="Xóa"></td>
+                               </tr>
+                               <tr>
+                                 <td scope="row"><input  type="checkbox" name="" id=""></td>
+                                 <td>0003</td>
+                                 <td>Latte Latte</td>
+                                 <td>4000 đ</td>
+                                 <td><input type="button" value="Sửa"><input type="button" value="Xóa"></td>
+                               </tr>
+                               <tr>
+                                 <td scope="row"><input  type="checkbox" name="" id=""></td>
+                                 <td>0004</td>
+                                 <td>Ngọc Viễn Đông</td>
+                                 <td>4000 đ</td>
+                                 <td><input type="button" value="Sửa"><input type="button" value="Xóa"></td>
+                               </tr>
+                               <tr>
+                                 <td scope="row"><input  type="checkbox" name="" id=""></td>
+                                 <td>0005</td>
+                                 <td>Phin Bọt Biển</td>
+                                 <td>4000 đ</td>
+                                 <td><input type="button" value="Sửa"><input type="button" value="Xóa"></td>
+                               </tr>
+                               <tr>
+                                 <td scope="row"><input  type="checkbox" name="" id=""></td>
+                                 <td>0006</td>
+                                 <td>Phin Sữa Đá - Năng Lượng</td>
+                                 <td>4000 đ</td>
+                                 <td><input type="button" value="Sửa"><input type="button" value="Xóa"></td>
+                               </tr>
+                               <tr>
+                                 <td scope="row"><input  type="checkbox" name="" id=""></td>
+                                 <td>0007</td>
+                                 <td>Phin Đen Đá - Đậm Đà</td>
+                                 <td>4000 đ</td>
+                                 <td><input type="button" value="Sửa"><input type="button" value="Xóa"></td>
+                               </tr>
+                               <tr>
+                                 <td scope="row"><input  type="checkbox" name="" id=""></td>
+                                 <td>0008</td>
+                                 <td>Sữa Chua Phúc Bồn Tử Đác Cam</td>
+                                 <td>4000 đ</td>
+                                 <td><input type="button" value="Sửa"><input type="button" value="Xóa"></td>
+                               </tr>
+                               <tr>
+                                <td scope="row"><input  type="checkbox" name="" id=""></td>
+                                <td>0008</td>
+                                <td>Sữa Chua Phúc Bồn Tử Đác Cam</td>
+                                <td>4000 đ</td>
+                                <td><input type="button" value="Sửa"><input type="button" value="Xóa"></td>
+                              </tr>
+                              <tr>
+                                <td scope="row"><input  type="checkbox" name="" id=""></td>
+                                <td>0008</td>
+                                <td>Sữa Chua Phúc Bồn Tử Đác Cam</td>
+                                <td>4000 đ</td>
+                                <td><input type="button" value="Sửa"><input type="button" value="Xóa"></td>
+                              </tr>
+                              <tr>
+                                <td scope="row"><input  type="checkbox" name="" id=""></td>
+                                <td>0008</td>
+                                <td>Sữa Chua Phúc Bồn Tử Đác Cam</td>
+                                <td>4000 đ</td>
+                                <td><input type="button" value="Sửa"><input type="button" value="Xóa"></td>
+                              </tr>
+                      </table>
+                    </div>
+                         <div class="row-cols-1">
+                             <input type="button" value="Chọn tất cả">
+                             <input type="reset" value="Bỏ chọn tất cả">
+                             <input type="button" value="Xóa các mục đã chọn">
+                         </div>
+                 </div>
+
 
            </div>
             <div id="user" class="row-cols-1 menu-item">
@@ -142,19 +298,19 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <th scope="row">1</th>
+                          <td scope="row">1</td>
                           <td>Mark</td>
                           <td>Otto</td>
                           <td>@mdo</td>
                         </tr>
                         <tr>
-                          <th scope="row">2</th>
+                          <td scope="row">2</td>
                           <td>Jacob</td>
                           <td>Thornton</td>
                           <td>@fat</td>
                         </tr>
                         <tr>
-                          <th scope="row">3</th>
+                          <td scope="row">3</td>
                           <td>Larry</td>
                           <td>the Bird</td>
                           <td>@twitter</td>
@@ -164,6 +320,234 @@
                 </div>
             </div>
             <div id="coment" class="row-cols-1 menu-item">
+              <div class="container-fluid card-comment-wapper">
+                <div class="row">
+                  <div class="col-lg-4 card-comment">
+                    <div class="card-body">
+                          <div class="card-top mb-3">
+                            <img src="./assets/img/avatar.png " class="img-fluid rounded-circle avatar-user" alt="">
+                            <div class="card-right">
+                              <h4 class="header-tile">Huan Ba</h4>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                            </div>
+                          </div>
+                          <p class="sub-header">Do uong rat ngonDo uong ra uong rat ngonDo uong ra uong rat ngonDo uong ra uong rat ngonDo uong rat ngonDo uong rat ngonDo uong rat ngon</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 card-comment">
+                    <div class="card-body">
+                          <div class="card-top mb-3">
+                            <img src="./assets/img/avatar.png " class="img-fluid rounded-circle avatar-user" alt="">
+                            <div class="card-right">
+                              <h4 class="header-tile">Huan Ba</h4>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                            </div>
+                          </div>
+                          <p class="sub-header">Do uong rat ngon</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 card-comment">
+                    <div class="card-body">
+                          <div class="card-top mb-3">
+                            <img src="./assets/img/avatar.png " class="img-fluid rounded-circle avatar-user" alt="">
+                            <div class="card-right">
+                              <h4 class="header-tile">Huan Ba</h4>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                            </div>
+                          </div>
+                          <p class="sub-header">Do uong rat ngonDo uong rat ngonDo uong rat ngonDo uong rat ngon</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 card-comment">
+                    <div class="card-body">
+                          <div class="card-top mb-3">
+                            <img src="./assets/img/avatar.png " class="img-fluid rounded-circle avatar-user" alt="">
+                            <div class="card-right">
+                              <h4 class="header-tile">Huan Ba</h4>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                            </div>
+                          </div>
+                          <p class="sub-header">Do uong rat ngonDo uong rat ngonDo uong rat ngonDo uong rat ngon</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 card-comment">
+                    <div class="card-body">
+                          <div class="card-top mb-3">
+                            <img src="./assets/img/avatar.png " class="img-fluid rounded-circle avatar-user" alt="">
+                            <div class="card-right">
+                              <h4 class="header-tile">Huan Ba</h4>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                            </div>
+                          </div>
+                          <p class="sub-header">Do uong rat ngonDo uong rat ngonDo uong rat ngonDo uong rat ngon</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 card-comment">
+                    <div class="card-body">
+                          <div class="card-top mb-3">
+                            <img src="./assets/img/avatar.png " class="img-fluid rounded-circle avatar-user" alt="">
+                            <div class="card-right">
+                              <h4 class="header-tile">Huan Ba</h4>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                            </div>
+                          </div>
+                          <p class="sub-header">Do uong rat ngonDo uong rat ngonDo uong rat ngonDo uong rat ngon</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 card-comment">
+                    <div class="card-body">
+                          <div class="card-top mb-3">
+                            <img src="./assets/img/avatar.png " class="img-fluid rounded-circle avatar-user" alt="">
+                            <div class="card-right">
+                              <h4 class="header-tile">Huan Ba</h4>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                            </div>
+                          </div>
+                          <p class="sub-header">Do uong rat ngonDo uong rat ngonDo uong rat ngonDo uong rat ngon</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 card-comment">
+                    <div class="card-body">
+                          <div class="card-top mb-3">
+                            <img src="./assets/img/avatar.png " class="img-fluid rounded-circle avatar-user" alt="">
+                            <div class="card-right">
+                              <h4 class="header-tile">Huan Ba</h4>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                            </div>
+                          </div>
+                          <p class="sub-header">Do uong rat ngonDo uong rat ngonDo uong rat ngonDo uong rat ngon</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 card-comment">
+                    <div class="card-body">
+                          <div class="card-top mb-3">
+                            <img src="./assets/img/avatar.png " class="img-fluid rounded-circle avatar-user" alt="">
+                            <div class="card-right">
+                              <h4 class="header-tile">Huan Ba</h4>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                            </div>
+                          </div>
+                          <p class="sub-header">Do uong rat ngonDo uong rat ngonDo uong rat ngonDo uong rat ngon</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 card-comment">
+                    <div class="card-body">
+                          <div class="card-top mb-3">
+                            <img src="./assets/img/avatar.png " class="img-fluid rounded-circle avatar-user" alt="">
+                            <div class="card-right">
+                              <h4 class="header-tile">Huan Ba</h4>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                            </div>
+                          </div>
+                          <p class="sub-header">Do uong rat ngonDo uong rat ngonDo uong rat ngonDo uong rat ngon</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 card-comment">
+                    <div class="card-body">
+                          <div class="card-top mb-3">
+                            <img src="./assets/img/avatar.png " class="img-fluid rounded-circle avatar-user" alt="">
+                            <div class="card-right">
+                              <h4 class="header-tile">Huan Ba</h4>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                            </div>
+                          </div>
+                          <p class="sub-header">Do uong rat ngonDo uong rat ngonDo uong rat ngonDo uong rat ngon</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 card-comment">
+                    <div class="card-body">
+                          <div class="card-top mb-3">
+                            <img src="./assets/img/avatar.png " class="img-fluid rounded-circle avatar-user" alt="">
+                            <div class="card-right">
+                              <h4 class="header-tile">Huan Ba</h4>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                            </div>
+                          </div>
+                          <p class="sub-header">Do uong rat ngonDo uong rat ngonDo uong rat ngonDo uong rat ngon</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 card-comment">
+                    <div class="card-body">
+                          <div class="card-top mb-3">
+                            <img src="./assets/img/avatar.png " class="img-fluid rounded-circle avatar-user" alt="">
+                            <div class="card-right">
+                              <h4 class="header-tile">Huan Ba</h4>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                            </div>
+                          </div>
+                          <p class="sub-header">Do uong rat ngonDo uong rat ngonDo uong rat ngonDo uong rat ngon</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 card-comment">
+                    <div class="card-body">
+                          <div class="card-top mb-3">
+                            <img src="./assets/img/avatar.png " class="img-fluid rounded-circle avatar-user" alt="">
+                            <div class="card-right">
+                              <h4 class="header-tile">Huan Ba</h4>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                            </div>
+                          </div>
+                          <p class="sub-header">Do uong rat ngonDo uong rat ngonDo uong rat ngonDo uong rat ngon</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div id="posts" class="row-cols-1 menu-item">
             </div>
@@ -191,31 +575,23 @@
                 $(id_menu).fadeIn();
                 return;
             });
-            $('.form-add .btn-products').click(function(){
-                // let id_menu = $(this).children('a').attr('href');
+              $('#logout').on('click',function(event){
                 
-                $('.menu-item').hide();
-                $('#products').fadeIn();
+                location.href = "login.html";
 
 
-
-                
-                // $('menu li').click(function(){
-                //     let id_menu = $('menu li').children('a').attr('href="#products"');
-                //     $('.menu li').removeClass('active-style');
-                //     $(id_menu).addClass('active-style');
-                // });
+              });
 
                 return ;
 
             });
-            $('.container-products .btn-add').click(function(){
-                // let id_menu = $(this).children('a').attr('href');
-                $('#products').hide();
-                $('#add').fadeIn();
+            // $('.container-products .btn-add').click(function(){
+            //     // let id_menu = $(this).children('a').attr('href');
+            //     $('#products').hide();
+            //     $('#add').fadeIn();
 
-                return;
-            });
-        });
+            //     return;
+            // });
+        // });
     </script>
 </html>
