@@ -186,7 +186,7 @@ var lish_product_bakery = [
         title_Cost : '19.637 đ', 
     },
 ]
-var i=0 , j=0 , money_sm , money_lg , all_money_cart =0  
+var i=0 , j=0 , money_sm , money_lg , all_money_cart =0  , mumber_product_car =0
 
 function Product ({
     title_Vn,
@@ -295,6 +295,8 @@ click_drink.onclick = () => {
             )}   
         </div>
     )
+    var title = document.querySelector('title')
+    title.innerText = "Đồ Uống"
     elementRoot.render(elementRS)
 }
 
@@ -319,6 +321,8 @@ click_snacks.onclick = function ()  {
             )}   
         </div>
     )
+    var title = document.querySelector('title')
+    title.innerText = "Snacks"
     elementRoot.render(elementRS)
 }
 
@@ -353,6 +357,8 @@ click_bakery.onclick = function ()  {
                 )}   
             </div>
         )
+        var title = document.querySelector('title')
+        title.innerText = "Bakery"
         elementRoot.render(elementRS)
     }
 // 
@@ -453,6 +459,7 @@ btn_pay.onclick = () => {
     var product_size = document.querySelector('.info_product_size_lish .active')
     var product_index = document.querySelector('.index')
     var product_cost = document.querySelector('.gia_tien')
+    var element_mumber_product_car = document.querySelector('.h_cart_mumber')
 
     liss.push({ id : ++j,
                 img : product_img.src,
@@ -462,6 +469,7 @@ btn_pay.onclick = () => {
                 cost : product_cost.innerText,
 
             })
+            element_mumber_product_car.innerText = ++mumber_product_car
     // tính tổng tiền
     all_money_cart =0
     liss.map(e => all_money_cart += +e.index *e.cost.substring(0, e.cost.length-2))
@@ -488,8 +496,8 @@ btn_pay.onclick = () => {
                                             liss.splice(i_pr,1)     
                                         }
                                     }
-
-                                    all_money_cart != 0 
+                                    element_mumber_product_car.innerText = --mumber_product_car
+                                    all_money_cart > 0 
                                         ? document.querySelector(".cart-total span").innerText = all_money_cart.toFixed(3).toString() + " đ" 
                                         : document.querySelector(".cart-total span").innerText = '0 đ'
 
