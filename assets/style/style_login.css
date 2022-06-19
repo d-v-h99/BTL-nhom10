@@ -7,7 +7,10 @@
 html {
     font-family: 'BIZ UDPGothic', sans-serif;
 }
-
+:root {
+    --color-white: #fff;
+    --color-green: #0C713D;
+}
 body {
     width: 100%;
     height: 100vh;
@@ -17,25 +20,27 @@ body {
     background-repeat: no-repeat;
   
 }
-
-.login-box {
+.login-page {
     width: 500px;
     height: 600px;
-    background-color: #0C713D;
-    color: #fff;
+    background-color: var(--color-white);
+    color: var(--color-green);
     top: 50%;
     left: 50%;
-    position: absolute;
+    position: relative;
     transform: translate(-50%,-50%);
     border-radius: 10px;
     padding: 30px 30px;
 }
-
-.login-box .user-icon {
+.form {
+    
+}
+.form .user-icon,
+.form .user-icon {
     font-size: 70px;
-    color: #fff;
-    text-align: center;
+    color: var(--color-green);
     position: absolute;
+    top: 16px;
     left: 50%;
     transform: translateX(-50%);
     
@@ -47,50 +52,91 @@ body {
     font-size: 30px;
     padding:  0 0 20px;
 }
-
-.login-box p {
+.form p,
+.form p {
     font-weight: bold;
-    margin: 0;
-    padding: 0;
+    font-size: 20px;
 }
-
-.login-box input {
+.form input,
+.form input {
     width: 100%;
     margin-bottom: 20px;
 }
-
-.login-box input[type="text"], input[type="password"]  {
-    outline: none;  
+.input-email,
+.input-pw,
+.input-user {
+    background-color: #fff;
     height: 40px;
     padding: 4px 16px;
-    
+    border: 2px solid var(--color-green);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: transparent;
 }
 
-.login-box input[type="submit"] {
+input[type="text"], input[type="password"]  {
+    outline: none;  
+}
+
+.form input[type="submit"] {
     border: none;
     outline: none;
-    background-color: #fff;
-    border-radius: 20px;
+    background-color: var(--color-green);
     font-size: 22px;
-    height: 44px;
+    padding: 15px;
     margin-top: 16px;
     transition: 0.3s;
+    color: var(--color-white);
 }
 
-.login-box input[type="submit"]:hover {
+.form input[type="submit"]:hover {
     cursor: pointer;
-    color: #000;
+    color: #fff;
     opacity: 0.8;
 }
-
-.login-box a {
+.form a,
+.form a {
     /* text-decoration: none; */
-    color: #fff;
+    color: var(--color-green);
 }
 
-#form-login p{
-    font-size: 24px;
-}
+#form-signup a,
 #form-login a {
     font-size: 20px;
+}
+
+.form #form-signup {
+    display: none;
+}
+
+.form button {
+    text-transform: uppercase;
+    outline: 0;
+    background: var(--color-green);
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 22px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+.form button:hover {
+    cursor: pointer;
+    color: #fff;
+    opacity: 0.8;
+}
+@media screen and (min-width: 576px) and (max-width: 1023px) {
+    .login-page {
+        width: 80%;
+    }
+ 
+}
+@media screen and (max-width: 575px) {
+    
+    .login-page {
+        width: 80%;
+    }
+ 
 }
