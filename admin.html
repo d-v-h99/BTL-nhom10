@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/style/style_admin.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
 
     <title>Admin</title>
 </head>
@@ -17,17 +17,31 @@
         </div>
         <div class="row-cols-1 menu">
             <nav class="nav-pc">
-              <ul class="menu-list">
+              <ul class="menu-list-pc">
                   <li class="active-style"><a  href="#admin">Trang chủ</a></li>
                   <li><a  href="#products">Sản phẩm</a></li>
                   <li><a href="#user">Khách hàng</a></li>
                   <li><a  href="#coment">Bình luận</a></li>
                   <li><a  href="#posts">Bài viết</a></li>
-                  <li><a  href="#statistical">Thống kê</a></li>
               </ul>
             </nav>
-            <lable class="btn-nav"><i class="fas fa-bars nav-btn"></i></lable>
-            <label for="" class="nav-overlay"></label>
+            <label class="btn-nav" for="nav-mobile-input">
+              <i class="fas fa-bars nav-btn"></i>
+            </label>
+            <input type="checkbox" class="nav-input" name="" id="nav-mobile-input">
+            <label for="nav-mobile-input" class="nav-overlay"></label>
+            <nav class="nav-mobile">
+              <label for="nav-mobile-input" class="nav-close btn-outline-danger"><i class="fas fa-times"></i></label>
+              
+              <ul class="menu-mobile-list text-center">
+                  <li><a  href="#admin">Trang chủ</a></li>
+                  <li><a  href="#products">Sản phẩm</a></li>
+                  <li><a href="#user">Khách hàng</a></li>
+                  <li><a  href="#coment">Bình luận</a></li>
+                  <li><a  href="#posts">Bài viết</a></li>
+              </ul>
+            </nav>
+
         </div>
        <div  class="menu-content">
            <div id="admin" class="row-cols-1 menu-item">
@@ -550,15 +564,40 @@
               </div>
             </div>
             <div id="posts" class="row-cols-1 menu-item">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                  </tr>
+                  <tr>
+                    <th>2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                  </tr>
+                  <tr>
+                    <th>3</th>
+                    <td>Larry the Bird</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div id="statistical" class="row-cols-1 menu-item">
-            </div>
+
        </div>
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
     <!-- JS -->
+    <script src="./assets/js/main.js"></script>
     <script>
         $(document).ready(function(){
             
@@ -566,7 +605,7 @@
             $('.menu-item:first-child').fadeIn();
             $('.menu li').click( function(){
               // active menu
-                $('.menu li').removeClass('active-style')
+                $('.menu-list-pc li').removeClass('active-style')
                 $(this).addClass('active-style');
                 
                 // Show menu item
@@ -576,22 +615,10 @@
                 return;
             });
               $('#logout').on('click',function(event){
-                
                 location.href = "login.html";
-
-
               });
-
+             
                 return ;
-
             });
-            // $('.container-products .btn-add').click(function(){
-            //     // let id_menu = $(this).children('a').attr('href');
-            //     $('#products').hide();
-            //     $('#add').fadeIn();
-
-            //     return;
-            // });
-        // });
     </script>
 </html>
