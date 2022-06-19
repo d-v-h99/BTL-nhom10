@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <title>Coffe</title>
     <!-- Required meta tags -->
-
+ 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- icon và font chữ -->
-
     <link rel="stylesheet" href="./assets/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&display=swap" rel="stylesheet">
@@ -18,7 +17,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&display=swap" rel="stylesheet">
-
+    <!-- link fontwaesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/style/stype_coffe.css">
     <!-- Bootstrap CSS -->
@@ -26,21 +26,21 @@
     <!-- icon cạnh tiêu đề  -->
     <link rel="icon" href="/assets/img/logo.png" sizes="32x32">
 </head>
-
+ 
 <body>
     <!-- begin header -->
-
+ 
     <div class="header_1">
         <div class="h_top">
             <div class="h_delivered">
                 <img src="./assets/img/delivery.png" alt="">
             </div>
             <div class="h_logo">
-                <img src="./assets/img/logo.png" alt="">
+                <img id="img"  src="./assets/img/logo.png" alt="">
             </div>
             <div class="h_right">
                 <ul>
-                    <li class="login"><a href="">Đăng nhập</a></li>
+                    <li class="login"><a href="/login.html">Đăng nhập</a></li>
                     <li class="language"><a href="">VN</a></li>
                     <li class="language-last"><a href="">EN</a></li>
                     <li class="h_cart"><a href="">Giỏ hàng <i class="fa fa-shopping-cart"></i></a></li>
@@ -66,7 +66,6 @@
                             <li class="menu-sub-item">Lá trà Phúc Long</li>
                             <li class="menu-sub-item">Cold Brew Tea - Trà Ủ Lạnh - Phong Cách Trà Mới</li>
                             <li class="menu-sub-item">Nghệ thuật pha chế</li>
-
                         </ul>
                     </div>
                 </li>
@@ -104,38 +103,36 @@
         </div>
         <div class="row justify-content-center">
             <h1>HẠT CÀ PHÊ PHÚC LONG</h1>
-            <!-- <img src="/assets/img/icon_tealeaves.png" alt="" class="img_tealeaves"> -->
         </div>
         <div class="row justify-content-center">
             <img src="/assets/img/icon_tealeaves.png" alt="" class="img_tealeaves">
         </div>
+        <ul id="header_col">
+            <li class="tab-item active">
+                <a data-toggle="tab" href="#" >ĐẬM VỊ HẠT CÀ PHÊ RANG</a>
+            </li>
+            <li class="tab-item">
+                <a data-toggle="tab" href="#" >HƯƠNG VỊ MẠNH MẼ</a>
+            </li>
+            <li class="tab-item">
+                <a data-toggle="tab" href="#" >HƯƠNG VỊ TINH TẾ</a>
+            </li>
+            <li class="tab-item">
+                <a data-toggle="tab" href="#" >CÀ PHÊ MÙI</a>
+            </li>
+        </ul>
     </div>
-    <div class="container">
-        <div class="row tabs" id="header_col">
-            <div class="col-md-3 col-xs-12 tab-item active" style="padding-left: 15px;">
-                <button>ĐẬM VỊ HẠT CÀ PHÊ</button>
-            </div>
-            <div class="col-md-3 col-xs-12 tab-item" >
-                <button>HƯƠNG VỊ MẠNH MẼ</button>
-            </div>
-            <div class="col-md-3 col-xs-12 tab-item">
-                <button>HƯƠNG VỊ TINH TẾ</button>
-            </div>
-            <div class="col-md-3 col-xs-12 tab-item">
-                <button>CÀ PHÊ MÙI</button>
-            </div>
-        </div>
-    </div>
+    
     <!-- tab content 1 -->
     <div class="container tab-content active-content">
         <div class="row ">
             <div class="col-md-6 col-sm-12">
                 <p class="pag">Cà phê càng được rang sẫm màu hương vị càng trọn vẹn.
-                    Rang cà phê là một quá trình đòi hỏi sự tinh tế từ đôi bàn tay 
-                    và sự am hiểu từng loại hạt cà phê của người nghệ nhân. 
-                    Rang lửa nhỏ khiến cà phê chưa chín tới và đắng hơn, 
-                    trong khi rang quá kỹ lại khiến cà phê cháy khét đánh mất những đặc tính thượng hạng vốn có. 
-                    Trong quá trình rang đủ thời gian, những dinh dưỡng như proteins, 
+                    Rang cà phê là một quá trình đòi hỏi sự tinh tế từ đôi bàn tay
+                    và sự am hiểu từng loại hạt cà phê của người nghệ nhân.
+                    Rang lửa nhỏ khiến cà phê chưa chín tới và đắng hơn,
+                    trong khi rang quá kỹ lại khiến cà phê cháy khét đánh mất những đặc tính thượng hạng vốn có.
+                    Trong quá trình rang đủ thời gian, những dinh dưỡng như proteins,
                     enzymes mới sẽ tích tụ phía trong tạo nên phần chất của cà phê,
                     làm cho cà phê đậm hơn, sánh hơn.</p>
             </div>
@@ -148,12 +145,12 @@
                 <img src="/assets/img/coffe_content2.jpg" class="img_content_head">
             </div>
             <div class="col-md-6 col-sm-12">
-                <p class="pag">Trên hành trình tìm kiếm những hạt cà phê ngon nhất, 
+                <p class="pag">Trên hành trình tìm kiếm những hạt cà phê ngon nhất,
                     Phúc Long luôn chú trọng bốn đặc tính từ trái cà phê nhằm tôn trọng nguyên bản cho tách cà phê đậm vị.
                     <br>
                     - Hương thơm là mùi hương của hạt cà phê - thơm bao nhiêu hứa hẹn cho nhiều vị bấy nhiêu.
                     <br>
-                    - Thể chất là khái niệm để chỉ độ đậm đà trong nước chiết xuất cà phê. 
+                    - Thể chất là khái niệm để chỉ độ đậm đà trong nước chiết xuất cà phê.
                     Cảm nhận thông qua đánh giá của người thưởng thức.
                     <br>
                     - Acid là hợp chất tạo nên vị chua thanh của cà phê.
@@ -163,11 +160,11 @@
         </div>
         <div class="row ">
             <div class="col-md-6 col-sm-12">
-                <p class="pag">Tách cà phê hoàn hảo được định nghĩa là tách cà phê có vị đắng đậm đà, 
-                    chua thanh thoát, lan toả hương thơm nồng nàn, 
+                <p class="pag">Tách cà phê hoàn hảo được định nghĩa là tách cà phê có vị đắng đậm đà,
+                    chua thanh thoát, lan toả hương thơm nồng nàn,
                     dễ dàng chinh phục vị giác của bất cứ ai. <br>
-                    Tách cà phê đậm vị luôn luôn là thức uống giữ vị trí 
-                    nhất định trong lòng những tín đồ cà phê Việt, dù văn hoá thưởng thức 
+                    Tách cà phê đậm vị luôn luôn là thức uống giữ vị trí
+                    nhất định trong lòng những tín đồ cà phê Việt, dù văn hoá thưởng thức
                     có nhiều thay đổi theo sự phát triển từng ngày của xã hội.</p>
             </div>
             <div class="col-md-6 col-sm-12">
@@ -180,11 +177,11 @@
         <div class="row">
             <div class="col-md-6 col-sm-12">
                 <h3>CÀ PHÊ ROYAL</h3>
-                <p>Cà phê Royal là sự kết hợp hoàn hảo giữa ba loại <br> 
+                <p>Cà phê Royal là sự kết hợp hoàn hảo giữa ba loại <br>
                     hạt: Moka, Robusta và Culi theo tỉ lệ nhất định tạo <br>
                     nên sản phẩm hội tụ của sắc, hương và vị.
                 </p>
-                <a href="https://phuclong.com.vn/ca-phe/hat-ca-phe-phuc-long/ca-phe-royal" class="btn btn-outline-success">Xem chi tiết</a>
+                <a href="https://phuclong.com.vn/ca-phe/hat-ca-phe-phuc-long/ca-phe-royal" target="_blank" class="btn btn-outline-success">Xem chi tiết</a>
             </div>
             <div class="col-md-6 col-sm-12 bg-img">
                 <img src="/assets/img/coffe_content4.jpg" class="img_content">
@@ -204,7 +201,7 @@
                     giới. Hạt cà phê Robusta tròn, sậm màu, hàm lượng <br>
                     caffein khoảng 2 – 2.5%.
                 </p>
-                <a href="https://phuclong.com.vn/ca-phe/hat-ca-phe-phuc-long/ca-phe-culi-robusta" class="btn btn-outline-success">Xem chi tiết</a>
+                <a href="https://phuclong.com.vn/ca-phe/hat-ca-phe-phuc-long/ca-phe-culi-robusta" target="_blank" class="btn btn-outline-success">Xem chi tiết</a>
             </div>
         </div>
         <div class="row ">
@@ -216,9 +213,9 @@
                     Robusta, cùng với vị đắng gắt của hạt Culi, tạo nên <br>
                     hương vị mạnh mẽ.
                 </p>
-                <a href="https://phuclong.com.vn/ca-phe/hat-ca-phe-phuc-long/ca-phe-king" class="btn btn-outline-success">Xem chi tiết</a>
+                <a href="https://phuclong.com.vn/ca-phe/hat-ca-phe-phuc-long/ca-phe-king" target="_blank" class="btn btn-outline-success">Xem chi tiết</a>
             </div>
-            
+           
             <div class="col-md-6 col-sm-12 bg-img">
                 <img src="/assets/img/coffe_content6.jpeg" class="img_content">
             </div>
@@ -236,7 +233,7 @@
                     nước pha màu nước nâu nhạt, trong trẻo của hổ <br>
                     phách. Mùi hương của Arabica rất thanh tao, quý phái, ...
                 </p>
-                <a href="https://phuclong.com.vn/ca-phe/hat-ca-phe-phuc-long/ca-phe-arabica-culi" class="btn btn-outline-success">Xem chi tiết</a>
+                <a href="https://phuclong.com.vn/ca-phe/hat-ca-phe-phuc-long/ca-phe-arabica-culi" target="_blank" class="btn btn-outline-success">Xem chi tiết</a>
             </div>
             <div class="col-md-6 col-sm-12 bg-img">
                 <img src="/assets/img/coffe_content7.jpg" class="img_content">
@@ -256,7 +253,7 @@
                     mang đặc trưng riêng: chua nhẹ, hơi chát, hàm <br>
                     lượng caffein thấp, cùng hương thơm thoang thoảng.
                 </p>
-                <a href="https://phuclong.com.vn/ca-phe/hat-ca-phe-phuc-long/ca-phe-cherry" class="btn btn-outline-success">Xem chi tiết</a>
+                <a href="https://phuclong.com.vn/ca-phe/hat-ca-phe-phuc-long/ca-phe-cherry" target="_blank" class="btn btn-outline-success">Xem chi tiết</a>
             </div>
         </div>
         <div class="row ">
@@ -270,7 +267,7 @@
                     hiếm bởi chất lượng và hương vị tuyệt vời: thơm <br>
                     sang trọng, chua thanh thoát.
                 </p>
-                <a href="https://phuclong.com.vn/ca-phe/hat-ca-phe-phuc-long/ca-phe-moka" class="btn btn-outline-success">Xem chi tiết</a>
+                <a href="https://phuclong.com.vn/ca-phe/hat-ca-phe-phuc-long/ca-phe-moka" target="_blank" class="btn btn-outline-success">Xem chi tiết</a>
             </div>
             <div class="col-md-6 col-sm-12 bg-img">
                 <img src="/assets/img/coffe_content9.jpg" class="img_content">
@@ -287,7 +284,7 @@
                     sản phẩm thơm ngon, vị dịu ngọt mang đến cảm <br>
                     giác khoan khoái cho người thưởng thức.
                 </p>
-                <a href="https://phuclong.com.vn/san-pham-details/ca-phe-chocolate-phuc-long-200g" class="btn btn-outline-success">Xem chi tiết</a>
+                <a href="https://phuclong.com.vn/san-pham-details/ca-phe-chocolate-phuc-long-200g" target="_blank" class="btn btn-outline-success">Xem chi tiết</a>
             </div>
             <div class="col-md-6 col-sm-12 bg-img">
                 <img src="/assets/img/coffe_content10.png" class="img_content">
@@ -304,7 +301,7 @@
                     và hương vani Pháp, mang lại cho người thưởng <br>
                     thức vị dịu nhẹ.
                 </p>
-                <a href="https://phuclong.com.vn/san-pham-details/ca-phe-vanilla-phuc-long-200g" class="btn btn-outline-success">Xem chi tiết</a>
+                <a href="https://phuclong.com.vn/san-pham-details/ca-phe-vanilla-phuc-long-200g" target="_blank" class="btn btn-outline-success">Xem chi tiết</a>
             </div>
         </div>
         <div class="row ">
@@ -315,15 +312,15 @@
                     Robusta và hương hạt Hazelnut - một lựa chọn <br>
                     hoàn hảo để khởi đầu một ngày mới.
                 </p>
-                <a href="https://phuclong.com.vn/san-pham-details/ca-phe-hazelnut-phuc-long-200g" class="btn btn-outline-success">Xem chi tiết</a>
+                <a href="https://phuclong.com.vn/san-pham-details/ca-phe-hazelnut-phuc-long-200g" target="_blank" class="btn btn-outline-success">Xem chi tiết</a>
             </div>
-            
+           
             <div class="col-md-6 col-sm-12 bg-img">
                 <img src="/assets/img/coffe_content12.png" class="img_content">
             </div>
         </div>
     </div>
-
+ 
     <!-- begin footer -->
     <div class="container" id="footer_begin">
         <div class="row">
@@ -356,7 +353,7 @@
                     <a>
                         <img src="./assets/img/dathongbao.png" alt="dathongbao" id="img-noti">
                     </a>
-    
+   
                     <ul class="f-social">
                         <li><a class="btn-icon" href="http://www.facebook.com/phuclongcoffeeandtea"><i
                                     class="fa fa-facebook"></i></a></li>
@@ -375,6 +372,13 @@
             <a class="text-white" href="#">NHÓM 10-BÀI TẬP LỚN-62PM2</a>
         </div>
     </footer>
+    <!-- end footer  -->
+ 
+    <!-- begin backtop -->
+    <a href="#" class="backtop">
+        <i class="fa-solid fa-angle-up"></i>
+    </a>
+    <!-- end backtop -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -383,5 +387,5 @@
         crossorigin="anonymous"></script>
     <script src="/assets/js/js_coffe-and-tea.js"></script>
 </body>
-
+ 
 </html>
