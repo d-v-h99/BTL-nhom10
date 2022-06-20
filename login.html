@@ -15,41 +15,44 @@
   <body>
       <div class="login-page">
         <div class="form">
-          <form action="" id="form-login">
+          <form action="" onsubmit="Login(event)" id="form-login">
               <div class="user-icon">
               <i class="fa fa-user-circle" aria-hidden="true"></i>
               </div>
-              <h1 class="login">Login</h1>
+              <h1 class="login">ĐĂNG NHẬP</h1>
                 <div class="input-user">
-                  <input id="username" type="text"  name="" placeholder="Enter username">
+                  <input id="username-login" type="text"  name="" placeholder="Enter username">
                 </div>
                 <div class="input-pw">
-                  <input id="password"  type="password" name="" placeholder="Enter password">
+                  <input id="password-login"  type="password" name="" placeholder="Enter password">
                 </div>
-                <input id="btn-login" type="submit" name="" value="Login">
+                <input id="btn-login" type="submit" name="" value="ĐĂNG NHẬP">
                 <div class="message">
                   <p href="#">Quên mật khẩu?  <a href="#">Đăng kí tài khoản mới </a></p>
                   
                 </div>
             </form>
 
-            <form action="" id="form-signup">
+            <form onsubmit="SignUp(event)" id="form-signup">
               <div class="user-icon">
                 <i class="fa fa-user-circle" aria-hidden="true"></i>
               </div>
-              <h1 class="login">Sign up</h1>
+              <h1 class="login">ĐĂNG KÍ</h1>
               <div class="input-user">
-                <input id="username" type="text"  name="" placeholder="Enter username">
-              </div>
-              <div class="input-pw">
-                <input id="password"  type="password" name="" placeholder="Enter password">
+                <input id="username" type="text"  name="name" placeholder="username">
               </div>
               <div class="input-email">
-                <input type="text" name="" placeholder="email">
+                <input id="email" type="text" name="" placeholder="email">
               </div>
-              <button>Tạo</button>
+              <div class="input-pw">
+                <input id="password"  type="password" name="" placeholder="password">
+              </div>
+              <div class="input-pw">
+                <input id="password-confirm"  type="password" name="" placeholder="Confirm password">
+              </div>
+              <button id="btn-cread">Tạo</button>
               <div class="message">
-                <p href="#">Quên mật khẩu?  <a href="#">Login</a></p>
+                <p href="#">Quên mật khẩu?  <a href="#">Đăng nhập</a></p>
                 
               </div>
             </form>
@@ -70,39 +73,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="./assets/js/main.js"></script>
     <script>
       $(document).ready(function(){
-          $('#btn-login').on('click', function(event){
-            event.preventDefault();
-            var un = document.querySelector('#username');
-            var pw = document.querySelector('#password')
-            if(un.value == 'admin' && pw.value == '123456') {
-              location.href = "admin.html"
-            }
-            else if(un.value == '' && pw.value == ''){
-              alert("chưa nhập ");
-            }
-            else{
-              alert('sai')
-            }
-          })
+       
+          // $('#btn-login').on('click', function(event){
+          //   event.preventDefault();
+          //   var un = document.querySelector('#username');
+          //   var pw = document.querySelector('#password')
+          //   if(un.value == 'admin' && pw.value == '123456') {
+          //     location.href = "admin.html"
+          //   }
+          //   else if(un.value == '' && pw.value == ''){
+          //     alert("chưa nhập ");
+          //   }
+          //   else{
+          //     alert('sai')
+          //   }
+          // })
+          $('.message a').click(function(){
+            $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+          });
           
       });
-      // const userName = document.querySelector("#username");
-      // const passWord = document.querySelector("#password");
-      // const btnLogin = document.querySelector('#btn-login');
-
-      // btnLogin.addEventListener('click', function(){
-      //     if(userName.value == 'admin' && passWord.value == '111') {
-      //         document.location = './admin/html';
-      //     }
-      //     else{
-      //         alert("sai")
-      //     }
-          
-      // });
-
+    
     </script>
   </body>
 </html>
