@@ -1,6 +1,5 @@
 
 
-
 function SignUp (event){
     event.preventDefault();
     var username = document.getElementById("username").value;
@@ -13,15 +12,19 @@ function SignUp (event){
       e_mail: email,
     
     };
+    if (user.user_name == 'admin'){
+      alert('không thể đăng kí');
+      return;
+    }
+
     if(password == passwordConfirm){
 
       localStorage.setItem(username, JSON.stringify(user));
       alert('dang ki thanh cong');
     }
-    else {
-      alert('mat khau khong trung');
+    else{
+      alert('mật khẩu không trùng');
     }
-    
     
   };
 
@@ -29,6 +32,8 @@ function SignUp (event){
 
 function Login(event){
   event.preventDefault();
+  const unAdmin = 'admin';
+  const pwAdmin = '123456';
   var username = document.getElementById('username-login').value;
   var password = document.getElementById('password-login').value;
   var user = localStorage.getItem(username);
@@ -37,17 +42,19 @@ function Login(event){
     alert('chưa nhập tài khoản mật khẩu');
     return;
   }
+  else if(username == unAdmin && password == pwAdmin){
+    window.location.href = 'admin.html';
+    return;
+  }
+  
+
   if(user == null){
-    alert("tài khoản không tồn tại");
+    alert('tài khoản không tồn tại')
   }
   else if(username == data.user_name && password == data.pass_word ){
-    window.location.href = 'admin.html';
+    window.location.href = 'index.html';
   }
   else{
     alert('sai tài khoản hoặc mật khẩu')
   }
-
- 
-  
-
 }
