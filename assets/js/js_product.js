@@ -186,7 +186,7 @@ var lish_product_bakery = [
         title_Cost : '19.637 đ', 
     },
 ]
-var i=0 , j=0 , money_sm , money_lg , all_money_cart =0  
+var i=0 , j=0 , money_sm , money_lg , all_money_cart =0  , mumber_product_car =0
 
 function Product ({
     title_Vn,
@@ -295,6 +295,8 @@ click_drink.onclick = () => {
             )}   
         </div>
     )
+    var title = document.querySelector('title')
+    title.innerText = "Đồ Uống"
     elementRoot.render(elementRS)
 }
 
@@ -319,6 +321,8 @@ click_snacks.onclick = function ()  {
             )}   
         </div>
     )
+    var title = document.querySelector('title')
+    title.innerText = "Snacks"
     elementRoot.render(elementRS)
 }
 
@@ -353,6 +357,8 @@ click_bakery.onclick = function ()  {
                 )}   
             </div>
         )
+        var title = document.querySelector('title')
+        title.innerText = "Bakery"
         elementRoot.render(elementRS)
     }
 // 
@@ -447,11 +453,13 @@ function Cart_product ({
 
 var btn_pay = document.querySelector('.btn_pay')
 btn_pay.onclick = () => {
+
     var product_img = document.querySelector('.modal_img')
     var product_name = document.querySelector('.info_product_name')
     var product_size = document.querySelector('.info_product_size_lish .active')
     var product_index = document.querySelector('.index')
     var product_cost = document.querySelector('.gia_tien')
+    var element_mumber_product_car = document.querySelector('.h_cart_mumber')
 
     liss.push({ id : ++j,
                 img : product_img.src,
@@ -461,12 +469,13 @@ btn_pay.onclick = () => {
                 cost : product_cost.innerText,
 
             })
+            element_mumber_product_car.innerText = ++mumber_product_car
     // tính tổng tiền
     all_money_cart =0
     liss.map(e => all_money_cart += +e.index *e.cost.substring(0, e.cost.length-2))
 
      var buy_product = (
-                    <ul>
+                    <ul className="Cart_ListProduct">
                         {liss.map(e => 
                             <Cart_product
                                 img = {e.img}
@@ -479,17 +488,16 @@ btn_pay.onclick = () => {
                                 
                                 remove_product ={ () => {
                                     var cart_remove_product = document.querySelector('.remove-' + e.id.toString() )
-                                    cart_remove_product.remove()
+                                    cart_remove_product.setAttribute("style" , "display : none;") 
 
                                     for(var i_pr=0 ; i_pr<liss.length ; i_pr++){
                                         if(liss[i_pr].id == e.id){
                                             all_money_cart -= +e.index * liss[i_pr].cost.substring(0, e.cost.length-2) 
-                                            liss.splice(i_pr,1)
-                                            
+                                            liss.splice(i_pr,1)     
                                         }
                                     }
-
-                                    all_money_cart != 0 
+                                    element_mumber_product_car.innerText = --mumber_product_car
+                                    all_money_cart > 0 
                                         ? document.querySelector(".cart-total span").innerText = all_money_cart.toFixed(3).toString() + " đ" 
                                         : document.querySelector(".cart-total span").innerText = '0 đ'
 
@@ -500,8 +508,6 @@ btn_pay.onclick = () => {
                     </ul>
                 )
     document.querySelector(".cart-total span").innerText = all_money_cart.toFixed(3).toString() + " đ"                            
-    
-    
     
     // cho số lượng khi thoát thành 1
     product_index.innerText = 1 
