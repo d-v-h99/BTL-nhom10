@@ -216,7 +216,7 @@ a{
     box-shadow: 0px 0px 8px 0 rgb(205 205 205 / 50%);
 }
 .bg-img{
-    background-image: url(./assets/img/bg_coffe.png);
+    background-image: url(/assets/img/bg_coffe.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
