@@ -89,6 +89,7 @@ body {
 }
 .h_cart:hover .sub-cart {
     display: block;
+    z-index: 1000;
 }
 .h_cart .sub-cart {
     display: none;

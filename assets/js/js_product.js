@@ -1,14 +1,14 @@
-// // auto next logo 
-// var index = 0;
-// changeImg = function(){
-//     var imgs = ["/assets/img/logo.png","/assets/img/logo_2.png","/assets/img/logo_1.png"];
-//     document.getElementById('img_logo').src = imgs[index];
-//     index++;
-//     if(index == 3){
-//         index = 0;
-//     }
-// }
-// setInterval(changeImg,1000);
+// auto next logo 
+var change_img = document.querySelector(".h_logo .img_logo")
+setInterval(function(){
+    var index_img = 0
+    var imgs = ["/assets/img/logo.png","/assets/img/logo_2.png","/assets/img/logo_1.png"]
+    change_img.setAttribute("src", imgs[index_img]) 
+    index_img++
+    if(index_img == 3){
+        index_img = 0
+    }
+},1000);
 
 
 //reponsive
