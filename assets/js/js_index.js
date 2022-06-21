@@ -235,7 +235,7 @@ document.addEventListener("DOMContentLoaded",function(){
 // auto next logo 
 var index = 0;
 changeImg = function(){
-    var imgs = ["/assets/img/logo.png","/assets/img/logo_2.png","/assets/img/logo_1.png"];
+    var imgs = ["./assets/img/logo.png","./assets/img/logo_2.png","./assets/img/logo_1.png"];
     document.getElementById('img_logo').src = imgs[index];
     index++;
     if(index == 3){

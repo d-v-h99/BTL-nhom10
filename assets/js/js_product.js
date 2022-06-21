@@ -2,7 +2,7 @@
 var change_img = document.querySelector(".h_logo .img_logo")
 setInterval(function(){
     var index_img = 0
-    var imgs = ["/assets/img/logo.png","/assets/img/logo_2.png","/assets/img/logo_1.png"]
+    var imgs = ["./assets/img/logo.png","./assets/img/logo_2.png","./assets/img/logo_1.png"]
     change_img.setAttribute("src", imgs[index_img]) 
     index_img++
     if(index_img == 3){
