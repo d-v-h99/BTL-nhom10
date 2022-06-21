@@ -73,8 +73,9 @@ body {
     margin-bottom: 20px;
     background-color: transparent;
 }
-
-input[type="text"], input[type="password"]  {
+input[type="email"],
+input[type="text"],
+input[type="password"]  {
     outline: none;  
 }
 
