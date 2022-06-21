@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head> 
+<head>
     <title>BTL-nhóm 10</title>
-      <!-- Required meta tags -->
+    <!-- Required meta tags -->
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- icon và font chữ -->
+    <!-- icon và font chữ -->
 
     <link rel="stylesheet" href="./assets/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,18 +20,23 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-    
-    
+
+
 </head>
 
 <body>
     <!-- begin header -->
-    
+
     <div class="header_1">
         <div class="h_top">
+            <div id="bars"><i class="fa fa-bars fa-2x" style="color: white;"></i></div>
             <div class="h_delivered">
                 <img src="./assets/img/delivery.png" alt="">
             </div>
+            <div class="h_delivered_1">
+                <img src="./assets/img/delivery-mobile.png" alt="">
+            </div>
+
             <div class="h_logo">
                 <img src="./assets/img/logo.png" alt="">
             </div>
@@ -46,8 +51,9 @@
         </div>
         <div class="h_menu">
             <ul>
-                <li><a href="">TRANG CHỦ</a></li>
-                <li class="menu"><a href="">CÀ PHÊ</a>
+                <li><a href="#">TRANG CHỦ</a></li>
+                <li class="menu">
+                    <a href="./coffe.html">CÀ PHÊ</a>
                     <div class="menu-sub">
                         <ul class="menu-sub-content">
                             <li class="menu-sub-item">Hành trình tách cà phê đậm vị</li>
@@ -56,7 +62,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="menu"><a href="">TRÀ</a>
+                <li class="menu"><a href="./tea.html">TRÀ</a>
                     <div class="menu-sub">
                         <ul class="menu-sub-content">
                             <li class="menu-sub-item">Hành trình tách trà đậm vị</li>
@@ -67,7 +73,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="menu"><a href="">THỨC UỐNG</a>
+                <li class="menu"><a href="./product.html">THỨC UỐNG</a>
                     <div class="menu-sub">
                         <ul class="menu-sub-content">
                             <li class="menu-sub-item">Thức uống</li>
@@ -76,7 +82,7 @@
                         </ul>
                     </div>
                 </li>
-                <li><a href="">VỀ CHÚNG TÔI</a></li>
+                <li><a href="./about_us.html">VỀ CHÚNG TÔI</a></li>
                 <li class="menu"><i class="fa fa-search"></i>
                     <div class="menu-sub">
                         <ul class="menu-sub-content">
@@ -92,7 +98,7 @@
     <!-- end header -->
 
     <!-- begin slide  -->
-    <!-- <div class="container-fluid slider">
+    <div class="container-fluid slider" id="slider-fluid">
         <div class="row">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
@@ -116,49 +122,49 @@
                 </a>
             </div>
         </div>
-    </div> -->
-    
+    </div>
+
     <!-- slide ver 2 -->
     <div class="slide-wrapper">
         <div class="cacslide">
-       <ul>
-           <li class="active">
-               <div class="motslide">
-                   <div class="anh" style="background-image: url(./assets/img/slide1.png)"></div>
-               </div>
-           </li>
-           <li>
-               <div class="motslide">
-                   <div class="anh" style="background-image: url(./assets/img/slide2.png)"></div>
-               </div>
-           </li>
-           <li>
-               <div class="motslide">
-                   <div class="anh" style="background-image: url(./assets/img/slide3.png)"></div>
-               </div>
-           </li>
-           <li>
-               <div class="motslide">
-                   <div class="anh" style="background-image: url(./assets/img/slide4.png)"></div>
-               </div>
-           </li>
-       </ul>
-   </div>
-   <div class="chuyenslide">
-       <ul>
-           <li class="kichhoat">1</li>
-           <li>2</li>
-           <li>3</li>
-           <li>4</li>
-       </ul>
-   </div>
-   <div class="nuts">
-    
-       <b class="trai"><i class="fa fa-angle-left"></i></b>
-        <b class="phai"><i class="fa fa-angle-right"></i></b>
-     </div>
-   </div>
-  
+            <ul>
+                <li class="active">
+                    <div class="motslide">
+                        <div class="anh" style="background-image: url(./assets/img/slide1.png)"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="motslide">
+                        <div class="anh" style="background-image: url(./assets/img/slide2.png)"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="motslide">
+                        <div class="anh" style="background-image: url(./assets/img/slide3.png)"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="motslide">
+                        <div class="anh" style="background-image: url(./assets/img/slide4.png)"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="chuyenslide">
+            <ul>
+                <li class="kichhoat">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </div>
+        <div class="nuts">
+
+            <b class="trai"><i class="fa fa-angle-left"></i></b>
+            <b class="phai"><i class="fa fa-angle-right"></i></b>
+        </div>
+    </div>
+
     <!-- end slide -->
 
     <!-- begin content -->
@@ -256,7 +262,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6 col-xs-12" style=" padding: 70px 50px 25px;">
+            <div class="col-xs-12 col-md-6" style=" padding: 70px 50px 25px;">
                 <div class="map-info">
                     <div class="iteam">
                         <i class="fas fa-store"></i>

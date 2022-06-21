@@ -179,7 +179,7 @@ a{
     color: red;
 }
 .row h1{
-    color: #0C713D;
+    /* color: #0C713D; */
     font-family: 'Lora', serif;
 }
 #header_col{
@@ -442,5 +442,12 @@ p{
     .img_coffe1{
         margin-top: 69px !important;
     }
+    .img_tealeaves{
+        height: 68px;
+        width: 68px;
+    
+    }
+   
+    
    
   }

@@ -29,21 +29,25 @@
 
     <div class="header_1">
         <div class="h_top">
+            <div id="bars"><i class="fa fa-bars fa-2x" style="color: white;"></i></div>
             <div class="h_delivered">
                 <img src="./assets/img/delivery.png" alt="">
+            </div>
+            <div class="h_delivered_1">
+                <img src="./assets/img/delivery-mobile.png" alt="">
             </div>
             <div class="h_logo">
                 <img src="./assets/img/logo.png" alt="">
             </div>
             <div class="h_right">
                 <ul>
-                    <li class="login"><a href="">Đăng nhập</a></li>
+                    <li class="login"><a href="./login.html">Đăng nhập</a></li>
                     <li class="language"><a href="">VN</a></li>
                     <li class="language-last"><a href="">EN</a></li>
                     <li class="h_cart">
-                        <a href="">Giỏ hàng 
+                        <a href="">Giỏ hàng
                             <i class="fa fa-shopping-cart"></i>
-                            <span class="h_cart_mumber" > 0 </span>
+                            <span class="h_cart_mumber"> 0 </span>
                         </a>
                         <div class="sub-cart">
                             <div class="cart-content">
@@ -69,7 +73,7 @@
                                     <label for="">Tổng tiền</label>
                                     <span>0 đ</span>
                                 </div>
-                               <div class="cart-pay"><a href="#">Thanh toán</a></div>
+                                <div class="cart-pay"><a href="#">Thanh toán</a></div>
                             </div>
                         </div>
                     </li>
@@ -78,8 +82,9 @@
         </div>
         <div class="h_menu">
             <ul>
-                <li><a href="/index.html">TRANG CHỦ</a></li>
-                <li class="menu"><a href="/coffe.html">CÀ PHÊ</a>
+                <li><a href="./index.html">TRANG CHỦ</a></li>
+                <li class="menu">
+                    <a href="./coffe.html">CÀ PHÊ</a>
                     <div class="menu-sub">
                         <ul class="menu-sub-content">
                             <li class="menu-sub-item">Hành trình tách cà phê đậm vị</li>
@@ -88,7 +93,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="menu"><a href="/tea.html">TRÀ</a>
+                <li class="menu"><a href="./tea.html">TRÀ</a>
                     <div class="menu-sub">
                         <ul class="menu-sub-content">
                             <li class="menu-sub-item">Hành trình tách trà đậm vị</li>
@@ -99,7 +104,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="menu"><a href="/product.html">THỨC UỐNG</a>
+                <li class="menu"><a href="./product.html">THỨC UỐNG</a>
                     <div class="menu-sub">
                         <ul class="menu-sub-content">
                             <li class="menu-sub-item">Thức uống</li>
@@ -108,8 +113,16 @@
                         </ul>
                     </div>
                 </li>
-                <li><a href="">VỀ CHÚNG TÔI</a></li>
-                <li><i class="fa fa-search"></i></li>
+                <li><a href="./about_us.html">VỀ CHÚNG TÔI</a></li>
+                <li class="menu"><i class="fa fa-search"></i>
+                    <div class="menu-sub">
+                        <ul class="menu-sub-content">
+                            <li class="menu-sub-item">Sản phẩm cà phê</li>
+                            <li class="menu-sub-item">Sản phẩm trà</li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- <li><i class="fa fa-search"></i></li> -->
             </ul>
         </div>
     </div>
@@ -117,10 +130,11 @@
 
     <!-- begin img  -->
     <div class=" slider">
-            <div class="header_img">
-                <img class="img-fluid" src="https://phuclong.com.vn/uploads/category/3366d8e73e57be-banner_1920576.png" alt="">
-            </div>
-        
+        <div class="header_img">
+            <img class="img-fluid" src="https://phuclong.com.vn/uploads/category/3366d8e73e57be-banner_1920576.png"
+                alt="">
+        </div>
+
     </div>
     <!-- end img -->
 
@@ -167,13 +181,13 @@
                 <!-- Modal Header -->
                 <div class="row">
                     <div class="col-md-5">
-                        <img src='' alt=""  class="modal_img"></img>
+                        <img src='' alt="" class="modal_img"></img>
                         <div class="gia_tien"></div>
                     </div>
                     <div class="col-md-7">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                         <div class="info_product">
-                            <div class="info_product_name">  </div>
+                            <div class="info_product_name"> </div>
                             <div class="info_product_size">
                                 <label for="">Kích cỡ</label>
                                 <ul class="info_product_size_lish">
@@ -198,8 +212,8 @@
                             <div>
                                 <label id="modal_cost">Thành tiền</label>
                             </div>
-                            <div >
-                                <button class="btn-buy-products text-uppercase btn_pay " data-dismiss="modal"> 
+                            <div>
+                                <button class="btn-buy-products text-uppercase btn_pay " data-dismiss="modal">
                                     Thanh toán
                                 </button>
                             </div>
@@ -271,7 +285,7 @@
 
     </script>
     <script>
-        
+
     </script>
 </body>
 

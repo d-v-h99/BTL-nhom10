@@ -314,3 +314,171 @@ p{
     right: 30px;
 }
 /* end backtop  */
+@media only screen and (max-width: 1200px) {
+    .h_menu{
+        display:block;
+        display: none;
+    }
+    .h_top{
+        background-color: #0e924e ;
+    }
+    .btn-outline-primary{
+        display: block;
+        
+    }
+    li.login a {
+        display: none;
+    }
+    .h_logo {
+        background-color: white;
+        order : 3;
+    }
+    .h_delivered_1{
+        order : 4;
+    }
+    .h_right{
+        display: none;
+        /* order : 2; */
+    }
+    .btn-outline-primary{
+        order : 1;
+    }
+
+  }
+  #slider-fluid{
+    display: none;
+  }
+  #bars {
+    display: none;
+    height: 30px;
+    width: 30px;
+}
+.h_delivered_1{
+    display: none;
+}
+
+  @media only screen and (max-width: 1000px) {
+      .h_right{
+          display : none;
+      }
+      .slide-wrapper{
+        /* ý của t là lúc màn đt 
+        thì ẩn cái slide dùng bằng js rồi
+        ẩn cái bootrap lên á*/
+        display: block;
+    }
+    #slider-fluid{
+
+        display: none;
+      }
+  }
+  @media only screen and (max-width: 1199px) {
+    .h_menu {
+      display: none;
+      width: 100vh;
+      /* height: 100vh; */
+    }
+    .h_menu ul {
+      padding-left: 0;
+    }
+    #bars {
+      display: block;
+    }
+    .slide-wrapper{
+        /* ý của t là lúc màn đt 
+        thì ẩn cái slide dùng bằng js rồi
+        ẩn cái bootrap lên á*/
+        display: none;
+    }
+    #slider-fluid{
+
+        display: block;
+      }
+    .h_menu ul li {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      /* padding: 0; */
+      height: auto;
+    }
+    .img_content1 {
+      width: 100%;
+    }
+    .h_menu ul li a:hover {
+      width: 100% !important;
+      color: #00713d;
+      height: 100% !important;
+      display: flex;
+      align-items: center;
+    }
+    .h_menu ul li a:hover .h_menu ul li{
+      height: 300px !important;
+    }
+    .h_menu ul li a {
+      /* padding: 13px 0; */
+      height: 40px;
+      width: 100% !important;
+      /* height: 100%; */
+      display: flex;
+      align-items: center;
+    }
+    /* .h_menu ul li::before {
+      position: absolute;
+      content: "";
+      left: 20px;
+      right: 20px;
+      height: 1px;
+      bottom: 0;
+      border-bottom: 1px solid #ddd;
+    } */
+    .h_menu ul li span {
+      color: rgb(129, 124, 124);
+    }
+    .menu-sub {
+      width: 100%;
+      padding-top: 0;
+      /* position: static; */
+    }
+    .h_delivered{
+        background-image: url('../img/delivery-mobile.png');
+    }
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .menu-sub-content {
+      width: 100%;
+      padding: 0;
+    }
+    .menu-sub-item {
+      padding: 10px 0 10px 60px !important;
+    }
+    .menu-sub::after{
+        content: none;
+    }
+    .animation_1, .animation_2, .animation_3{
+        opacity: 1 !important;
+    }
+    .animation_1.dilen{
+        animation: none !important;
+    }
+    .animation_2.sangtrai{
+        animation: none !important;
+    }
+    .animation_3.sangphai{
+        animation: none !important;
+    }
+    .h_delivered_1{
+        display: block;
+    }
+    .h_delivered{
+        display: none;
+    }
+    .content{
+        background-position-x: -226px !important;
+    }
+    .img_tea1{
+        margin-top: 69px !important;
+    }
+   
+  }
