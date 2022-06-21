@@ -26,7 +26,7 @@ var span = document.querySelectorAll(".h_menu ul li span")
 var index = 0;
 changeImg = function(){
     var imgs = ["/assets/img/logo.png","/assets/img/logo_2.png","/assets/img/logo_1.png"];
-    document.getElementById('img').src = imgs[index];
+    document.getElementById('img_logo').src = imgs[index];
     index++;
     if(index == 3){
         index = 0;
