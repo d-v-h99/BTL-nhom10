@@ -453,8 +453,9 @@ html,body{
 @media only screen and (max-width: 1200px) {
     .h_menu{
         display:block;
-        display: none;
+        /* display: none; */
     }
+  
     .h_top{
         background-color: #0e924e ;
     }
@@ -497,10 +498,17 @@ html,body{
       .h_right{
           display : none;
       }
+      .icon_user{
+        display: block !important;
+    }
+    li.icon_user{
+        margin-left: -22px;
+    }
+    #search-bar{
+        display: none;
+    }
       .slide-wrapper{
-        /* ý của t là lúc màn đt 
-        thì ẩn cái slide dùng bằng js rồi
-        ẩn cái bootrap lên á*/
+      
         display: block;
     }
     #slider-fluid{
@@ -512,7 +520,7 @@ html,body{
     .h_menu {
       display: none;
       width: 100vh;
-      /* height: 100vh; */
+    
     }
     .h_menu ul {
       padding-left: 0;
@@ -521,9 +529,7 @@ html,body{
       display: block;
     }
     .slide-wrapper{
-        /* ý của t là lúc màn đt 
-        thì ẩn cái slide dùng bằng js rồi
-        ẩn cái bootrap lên á*/
+       
         display: none;
     }
     #slider-fluid{
@@ -534,7 +540,7 @@ html,body{
       width: 100%;
       display: flex;
       align-items: center;
-      /* padding: 0; */
+    
       height: auto;
     }
     .img_content1 {
@@ -558,22 +564,14 @@ html,body{
       display: flex;
       align-items: center;
     }
-    /* .h_menu ul li::before {
-      position: absolute;
-      content: "";
-      left: 20px;
-      right: 20px;
-      height: 1px;
-      bottom: 0;
-      border-bottom: 1px solid #ddd;
-    } */
+   
     .h_menu ul li span {
       color: rgb(129, 124, 124);
     }
     .menu-sub {
       width: 100%;
       padding-top: 0;
-      /* position: static; */
+    
     }
     .h_delivered{
         background-image: url('../img/delivery-mobile.png');

@@ -578,9 +578,7 @@ div #btn_pay{
           display : none;
       }
       .slide-wrapper{
-        /* ý của t là lúc màn đt 
-        thì ẩn cái slide dùng bằng js rồi
-        ẩn cái bootrap lên á*/
+      
         display: block;
     }
     #slider-fluid{
@@ -592,7 +590,7 @@ div #btn_pay{
     .h_menu {
       display: none;
       width: 100vh;
-      /* height: 100vh; */
+    
     }
     .h_menu ul {
       padding-left: 0;
@@ -601,9 +599,7 @@ div #btn_pay{
       display: block;
     }
     .slide-wrapper{
-        /* ý của t là lúc màn đt 
-        thì ẩn cái slide dùng bằng js rồi
-        ẩn cái bootrap lên á*/
+     
         display: none;
     }
     #slider-fluid{
@@ -614,7 +610,7 @@ div #btn_pay{
       width: 100%;
       display: flex;
       align-items: center;
-      /* padding: 0; */
+   
       height: auto;
     }
     .img_content1 {
@@ -631,29 +627,21 @@ div #btn_pay{
       height: 300px !important;
     }
     .h_menu ul li a {
-      /* padding: 13px 0; */
+     
       height: 40px;
       width: 100% !important;
-      /* height: 100%; */
+     
       display: flex;
       align-items: center;
     }
-    /* .h_menu ul li::before {
-      position: absolute;
-      content: "";
-      left: 20px;
-      right: 20px;
-      height: 1px;
-      bottom: 0;
-      border-bottom: 1px solid #ddd;
-    } */
+  
     .h_menu ul li a {
       color: rgb(129, 124, 124);
     }
     .menu-sub {
       width: 100%;
       padding-top: 0;
-      /* position: static; */
+  
     }
     .h_delivered{
         background-image: url('../img/delivery-mobile.png');
