@@ -201,7 +201,7 @@ a{
     width: 100%;  
 }
 .bg-img{
-    background-image: url(/assets/img/bg_coffe.png);
+    background-image: url(../assets/img/bg_coffe.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;

@@ -24,7 +24,7 @@
 }
 
 body {
-    background: url("/assets/img/login.jpg");
+    background: url("../assets/img/login.jpg");
     object-fit: cover;
     /* background-position: center; */
     background-repeat: no-repeat;
