@@ -362,6 +362,15 @@ p{
       .h_right{
           display : none;
       }
+      .icon_user{
+        display: block !important;
+    }
+    li.icon_user{
+        margin-left: -22px;
+    }
+    #search-bar{
+        display: none;
+    }
   }
   @media only screen and (max-width: 1199px) {
     .h_menu {

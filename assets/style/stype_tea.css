@@ -355,10 +355,17 @@ p{
       .h_right{
           display : none;
       }
+      .icon_user{
+        display: block !important;
+    }
+    li.icon_user{
+        margin-left: -22px;
+    }
+    #search-bar{
+        display: none;
+    }
       .slide-wrapper{
-        /* ý của t là lúc màn đt 
-        thì ẩn cái slide dùng bằng js rồi
-        ẩn cái bootrap lên á*/
+      
         display: block;
     }
     #slider-fluid{
@@ -370,7 +377,7 @@ p{
     .h_menu {
       display: none;
       width: 100vh;
-      /* height: 100vh; */
+    
     }
     .h_menu ul {
       padding-left: 0;
@@ -379,9 +386,7 @@ p{
       display: block;
     }
     .slide-wrapper{
-        /* ý của t là lúc màn đt 
-        thì ẩn cái slide dùng bằng js rồi
-        ẩn cái bootrap lên á*/
+      
         display: none;
     }
     #slider-fluid{
@@ -416,15 +421,7 @@ p{
       display: flex;
       align-items: center;
     }
-    /* .h_menu ul li::before {
-      position: absolute;
-      content: "";
-      left: 20px;
-      right: 20px;
-      height: 1px;
-      bottom: 0;
-      border-bottom: 1px solid #ddd;
-    } */
+   
     .h_menu ul li span {
       color: rgb(129, 124, 124);
     }
