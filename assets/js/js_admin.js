@@ -1,4 +1,4 @@
-
+// Dang ki
 function SignUp (event){
     event.preventDefault();
     var username = document.getElementById("username").value;
@@ -28,7 +28,7 @@ function SignUp (event){
   };
 
 
-
+// Dang nhap
 function Login(event){
   event.preventDefault();
   const unAdmin = 'admin';
